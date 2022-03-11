@@ -1,0 +1,23 @@
+{
+  "name": "grupo_6_bequia",
+  "version": "1.0.0",
+  "description": "Repositorio para el proyecto integrador de DH. Grupo 6, codename: \"Bequia\"\r Este equipo se encuentra conformado por estudiantes del Turno Noche Ma/Ju 21:00/23:30:\r   - Barale, Lucas\r   - Cernik, Anna\r   - Raimer, Ernesto\r   - Risaro Sesar, David",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drisaro/grupo_6_bequia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drisaro/grupo_6_bequia/issues"
+  },
+  "homepage": "https://github.com/drisaro/grupo_6_bequia#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

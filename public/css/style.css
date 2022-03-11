@@ -1,0 +1,239 @@
+:root {
+    --amarillo:#EAB75B;
+    --arena:#F0E0C4;
+    --azul:#155094;
+    --celeste:#84C8E2;
+    --gris-oscuro:#9b9b9b;
+    --gris-claro:#F4F4F4;
+    --verde:#39b54a;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: var(--gris-claro);
+    background-color: white;
+}
+
+main{
+
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px 20px;
+    margin: 0 auto;
+}
+
+/*estilos header*/
+header{
+    background-color: black;
+    color: white;
+    height: 60px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 2px #071c33;
+}
+header form{
+    display: none;
+}
+.header-right i{
+    padding: 8px;
+    font-size: 20px;
+}
+.icono-menu{
+    font-size: 35px;
+    font-weight: 600;
+    
+}
+.registrarse, .ingresar{
+display: none;
+}
+.link-cart, .link-user{
+    color: white;
+    text-decoration: none;
+}
+
+/*fint estilos header*/
+
+
+/*********Estilos Register******************/
+/*********Fin Estilos Register******************/
+
+
+/*********Estilos Login******************/
+/*********Fin Estilos Login******************/
+
+
+/*********Estilos ProductDetail******************/
+/*********Fin Estilos ProductDetail******************/
+
+
+/*********Estilos ProductCart******************/
+/*********Fin Estilos ProductCart******************/
+
+
+
+
+/*estilos footer*/
+footer{
+    
+    text-align: center;
+}
+.footer-top{
+    background-color: var(--gris-claro);
+    padding: 15px 40px;
+}
+.footer-top i{
+  font-size: 30px;
+  margin-top: 8px;
+}
+.footer-top p{
+    margin-top: 15px;
+}
+.footer-top img{
+    width: 130px;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+.footer-top a{
+    text-decoration: none;
+    color: black;
+}
+.footer-bottom{
+    background-color: var(--gris-oscuro);
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.footer-bottom ul{
+    list-style: none;
+    text-align: left;
+}
+.footer-bottom ul li{
+    margin: 8px 0;
+}
+.footer-bottom a{
+    text-decoration: none;
+    color: white;
+}
+.footer-bottom a:hover{
+    text-decoration: underline;
+}
+/*fin estilos footer*/
+
+@media (min-width:769px){
+   /* Estilos header*/
+   .header-left{
+       display: flex;
+       align-items: center;
+   }
+   .header-left form {
+       display: inline-block;
+       margin-left: 10px;
+   }
+   .header-center h2{
+    font-size: 38px;
+}
+   input[name="buscador"]{
+    height: 35px;
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 4px;
+    padding: 0 5px 0 10px;
+    }
+
+    input[name="buscador"]:focus{
+        border-color:var(--celeste);
+        outline: 0;
+    }
+
+   .header-right .fa-user{
+       display: none;
+   }
+   .registrarse, .ingresar{
+       display: inline-block;
+       padding: 8px 10px;
+       background-color: var(--amarillo);
+       color: white;
+       text-decoration: none;
+       font-weight: 600;
+       border-radius: 8px;
+       margin: 0 5px;
+   }
+   .registrarse:hover{
+       background-color: #EAAB00;
+   }
+   .ingresar:hover{
+    background-color: #EAAB00;
+   }
+  
+   /*fin estilos header*/ 
+
+
+
+
+/*********Estilos Register******************/
+/*********Fin Estilos Register******************/
+
+
+/*********Estilos Login******************/
+/*********Fin Estilos Login******************/
+
+
+/*********Estilos ProductDetail******************/
+/*********Fin Estilos ProductDetail******************/
+
+
+/*********Estilos ProductCart******************/
+/*********Fin Estilos ProductCart******************/
+
+
+
+
+   /* Estilos footer*/
+   .footer-bottom ul{
+       display: flex;
+       justify-content: space-around;
+       height: 40px;
+   }
+   /*fin estilos footer*/ 
+}
+
+@media (min-width:1200px){
+     /*Estilos header*/   
+header{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+input[name="buscador"]{
+    width: 250px;
+    max-width: 300px;
+ }
+   /*fin estilos header*/ 
+
+
+
+ /*********Estilos Register******************/
+/*********Fin Estilos Register******************/
+
+
+/*********Estilos Login******************/
+/*********Fin Estilos Login******************/
+
+
+/*********Estilos ProductDetail******************/
+/*********Fin Estilos ProductDetail******************/
+
+
+/*********Estilos ProductCart******************/
+/*********Fin Estilos ProductCart******************/
+
+
+
+}
