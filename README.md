@@ -22,3 +22,5 @@ Para lograr esta estética nos basamos en los siguientes sitios web:
   - www.mercadolibre.com.ar
 
 El objetivo de este proyecto es entregar una página 100% funcional al momento de la finalización del curso. 
+
+Link al tablero de trabajo en Github: https://github.com/drisaro/grupo_6_bequia/projects/1
