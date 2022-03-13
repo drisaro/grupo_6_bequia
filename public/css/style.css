@@ -70,10 +70,151 @@ display: none;
 
 
 /*********Estilos ProductDetail******************/
+.productDetail-img{
+    width: 100%;
+}
+.productDetail-imgPrincipal{
+    width: 100%;
+    padding: 5px;
+}
+.productDetail-carrusel{
+    display: flex;
+    justify-content: space-around;
+}
+.productDetail-carrusel img{
+    width: 50px;
+    padding: 3px;
+    border: 1px solid var(--celeste);
+}
+.productDetail-content{
+    padding: 0 8px;
+    margin-top: 20px;
+}
+.productDetail-content h2{
+ font-size: 28px;
+}
+.productDetail-precio {
+    color: #e02b27;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 5px 0;
+}
+.productDetail-form{
+    font-size: 18px;
+}
+.productDetail-form label{
+  display: block;
+  margin: 10px 0;
+}
+input[name="productDetail-cantidad"]
+{
+    width: 40px;
+   text-align: center;
+}
+.productDetail-form button{
+    display: block;
+    background-color: var(--azul);
+    color: white;
+    padding: 8px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    max-width: 350px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+}
+.productDetail-caracteristicas {
+    margin-top: 20px;
+}
+.productDetail-caracteristicas strong{
+    font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+}
+.productDetail-caracteristicas p{
+    text-align: left;
+    font-size: 18px;
+}
 /*********Fin Estilos ProductDetail******************/
 
 
 /*********Estilos ProductCart******************/
+.cart-list-product{
+    width: 100%;
+}
+.cart-product {
+    border-bottom: 1px solid var(--gris-oscuro);
+    padding: 8px 0;
+}
+.cart-product-cabecera{
+    display: none;
+}
+.cart-product-top{
+display: flex;
+}
+.cart-product-top img{
+    width: 60px;  
+    max-width: 80px;
+    padding: 3px;
+    border: 1px solid var(--celeste);
+    margin-right: 15px;
+}
+.cart-product-detail{
+  font-size: 16px;
+}
+
+.cart-product-detail h3{
+  font-size: 22px;
+}
+.cart-product-detail .link-delete-cart-product{
+    text-decoration: none;
+    color: #bc0000;
+    font-size: 15px;
+}
+.cart-product-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    text-align: center;
+}
+.cart-product-title{
+    color: black;
+    font-weight: 600;
+}
+
+.cart-resume{
+background-color: var(--gris-claro);
+color: black;
+margin-top: 20px;
+padding: 10px 10px;
+}
+.cart-resume button{
+    display: block;
+    background-color: var(--azul);
+    color: white;
+    padding: 8px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+.cart-resume div{
+    padding: 5px 0;
+}
+.subtotal, .total, .envio {
+    display: flex;
+    justify-content: space-between;
+}
+.total{
+    border-top: 1px solid var(--gris-oscuro);
+    font-size: 20px;
+}
+.total span{
+    font-size: 20px;
+    font-weight: 600;
+}
 /*********Fin Estilos ProductCart******************/
 
 
@@ -126,7 +267,7 @@ footer{
     text-decoration: underline;
 }
 /*fin estilos footer*/
-
+ 
 @media (min-width:769px){
    /* Estilos header*/
    .header-left{
@@ -182,14 +323,65 @@ footer{
 
 
 /*********Estilos Login******************/
+
 /*********Fin Estilos Login******************/
 
 
 /*********Estilos ProductDetail******************/
+.contenedor-productDetail{
+    display: flex;
+    justify-content: space-between;
+}
+.productDetail-img{
+    width: 55%;
+}
+.productDetail-content{
+    width: 40%;
+}
 /*********Fin Estilos ProductDetail******************/
 
 
 /*********Estilos ProductCart******************/
+.cart-product-cabecera{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+}
+.cart-product-cab-left{
+    width: 35%; 
+}
+.cart-product-cab-right{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.contenedor-main-cart{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-list-product{
+    width: 70%;
+}
+.cart-resume{
+    width: 25%;
+    margin-top: 0;
+}
+.cart-product{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-product-top{
+width: 35%;
+}
+.cart-product-bottom{
+width: 60%;
+margin-top: 0;
+}
+.cart-product-title{
+    display: none;
+}
 /*********Fin Estilos ProductCart******************/
 
 

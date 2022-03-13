@@ -22,3 +22,5 @@ Para lograr esta estética nos basamos en los siguientes sitios web:
   - www.mercadolibre.com.ar
 
 El objetivo de este proyecto es entregar una página 100% funcional al momento de la finalización del curso. 
+
+Paleta de colores: https://coolors.co/f0e0c4-a8cde7-a4c6dd-e5d1af-f6e6c9
