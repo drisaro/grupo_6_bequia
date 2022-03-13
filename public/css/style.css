@@ -20,7 +20,6 @@ body{
 }
 
 main{
-
     width: 100%;
     max-width: 1200px;
     padding: 15px 20px;
@@ -58,7 +57,7 @@ display: none;
     text-decoration: none;
 }
 
-/*fint estilos header*/
+/*Fin estilos header*/
 
 
 /*********Estilos Register******************/
@@ -217,8 +216,24 @@ padding: 10px 10px;
 }
 /*********Fin Estilos ProductCart******************/
 
-
-
+/*********Estilos Home************************/
+.imagen-centrada {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.texto-centrado {
+    text-align: center;
+}
+.producto-centrado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/*********Fin Estilos Home************************/
 
 /*estilos footer*/
 footer{
