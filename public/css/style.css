@@ -74,16 +74,20 @@ display: none;
 }
 .productDetail-imgPrincipal{
     width: 100%;
-    padding: 5px;
+    
+    box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 20%);
+    background: #fff
 }
 .productDetail-carrusel{
     display: flex;
     justify-content: space-around;
+    margin-top: 15px;
 }
+
 .productDetail-carrusel img{
     width: 50px;
     padding: 3px;
-    border: 1px solid var(--celeste);
+    box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 20%);
 }
 .productDetail-content{
     padding: 0 8px;
@@ -103,14 +107,31 @@ display: none;
 }
 .productDetail-form label{
   display: block;
-  margin: 10px 0;
+  margin: 15px 0;
+  padding: 8px 0;
+  
+}
+select[name="productDetail-talla"]
+{
+    width: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 20%);
+    color: #7a7a7a;
+    border: 1px solid rgba(0,0,0,.25);
+    height: 40px;
 }
 input[name="productDetail-cantidad"]
 {
-    width: 40px;
+   width: 50px;
    text-align: center;
+   box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 20%);
+   color: #7a7a7a;
+   border: 1px solid rgba(0,0,0,.25);
+   height: 40px;
 }
-.productDetail-form button{
+
+input[name="productDetail-btn-agregar-carrito"]
+{
     display: block;
     background-color: var(--azul);
     color: white;
@@ -122,9 +143,15 @@ input[name="productDetail-cantidad"]
     margin: 0 auto;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
+
 .productDetail-caracteristicas {
     margin-top: 20px;
+    padding: 5px 20px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
 }
 .productDetail-caracteristicas strong{
     font-size: 22px;
@@ -348,10 +375,10 @@ footer{
     justify-content: space-between;
 }
 .productDetail-img{
-    width: 55%;
+    width: 40%;
 }
 .productDetail-content{
-    width: 40%;
+    width: 55%;
 }
 /*********Fin Estilos ProductDetail******************/
 
@@ -435,6 +462,7 @@ input[name="buscador"]{
 
 
 /*********Estilos ProductDetail******************/
+
 /*********Fin Estilos ProductDetail******************/
 
 
