@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+  
+
+.form-register {
+    width: 400px;
+    background-color: #E5D1AF;
+    padding: 30px;
+    margin: 19px 61% 1em;  
+    margin-top: 70px;
+    border-radius: 4px;
+    font-family: "calibri";
+    color: white;
+    box-shadow: 7px 13px 37px #5B5243;
+}
+
+body {
+    background-image: url("mkln\ cksld.jpg");
+  }
+  
+
+.form-register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background: #E5D1AF;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid#AC9D82 ;
+    font-family: "calibri";
+    font-size: 18px;
+}
+
+.form-register p {
+    height: 40px;
+    text-align:center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-register a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.form-register .botons{
+    width: 100%;
+    border: none;
+    padding: 12px;
+    color: #AC9D82;
+    margin: 16px 0;
+    font-size: 16px;
+}
