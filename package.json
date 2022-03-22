@@ -4,7 +4,8 @@
   "description": "Repositorio para el proyecto integrador de DH. Grupo 6, codename: \"Bequia\"\r Este equipo se encuentra conformado por estudiantes del Turno Noche Ma/Ju 21:00/23:30:\r   - Barale, Lucas\r   - Cernik, Anna\r   - Raimer, Ernesto\r   - Risaro Sesar, David",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
