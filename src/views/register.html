@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css">
-    <title>Formulario Registro</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagina de inicio</title>
+    
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,500&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    </head>
 <body>
-    <section class = "form-register"> 
+
+    <header>
+        <div class="header-left">
+            <i class="fas fa-bars icono-menu"></i>
+            <form action="/buscador" class="buscador">
+                <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+            </form>
+        </div>
+        <div class="header-center">
+            <h2>BEQUIA</h2>
+        </div>
+        <div class="header-right">
+            <a href="/login" class="link-user"><i class="fa-solid fa-user"></i></a>
+            <a href="/register" class="registrarse">REGISTRARSE</a>
+            <a href="/login" class="ingresar">INGRESAR</a> 
+            <a href="/carrito" class="link-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            
+            
+        </div>
+
+    </header>
+
+    <section class ="fondo-formularios">
+    <section class = "form-register">
         <h4>Formulario registro</h4>
         <input class = "controls" type = "text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
         <input class = "controls" type = "text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
@@ -22,6 +49,27 @@
 
 
     </section>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <img src="/images/logo.png" alt="Logo Bequia">
+            <a href="/"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="/"><i class="fa-brands fa-instagram"></i></a>
+            <p>+12345677</p>
+            <p>bequia.company@gmail.com</p>
+
+        </div>
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="/">Acerca de...</a> </li>
+                <li><a href="/">Términos y Condiciones</a></li>
+                <li><a href="/">Trabaja con nosotros</a></li>
+                <li><a href="/">Información</a></li>
+                <li><a href="/">Ayuda</a></li>
+            </ul>
+        </div>
+    </footer>
     
 </body>
 </html>
