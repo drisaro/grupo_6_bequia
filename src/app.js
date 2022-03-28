@@ -1,10 +1,12 @@
-const express=require("express");
-const path=require("path");
-const app= express();
-const mainRouter = require("./routes/");
+const express = require("express");
+const path = require("path");
+const app = express();
+const mainRouter = require("./routes/indexrouter");
 
 app.set("view engine", "ejs");
 app.set("views", "./src/partialviews");
+app.use("/", mainRouter);
+
 
 app.use(express.static(path.join(__dirname,'../public')))
 
