@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/drisaro/grupo_6_bequia#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3"
   }
 }
