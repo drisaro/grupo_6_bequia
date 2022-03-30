@@ -4,10 +4,43 @@
 <body>
     <%- include('./partialViews/header.ejs') %>
 
-    <main>
-        <div></div>
-    </main>
+        <section class ="fondo-formularios">
+        <section class = "form-register">
+                <h4>Editá tu producto</h4>
+                <input class = "controls" type = "text" name="nombre_producto" id="nombre_producto" placeholder="¿Cómo se llama?">
+                <input class = "controls" type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo">
+                <input class = "controls" type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?">
+                <h4>
+                <label>¿De qué color es?</label>
+                <select name="color_producto">
+                    <option value="mostaza">Mostaza</option>
+                    <option value="negro">Negro</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="violeta">Violeta</option>
+                    <option value="verde">Verde</option>
+                </select>
+                </h4>              
+                <h4>
+                <label>Elegí la categoría</label>
+                    <select name="categoria_producto">
+                        <option value="lentes_sol">Lentes de sol</option>
+                        <option value="ojotas">Ojotas</option>
+                        <option value="sombreros">Sombreros</option>
+                        <option value="trajes_baño">Trajes de baño</option>
+                    </select>
+                </h4>
+                <h4>
+                <div>
+                    <label for="iamgen_producto">Subí una foto:</label>
+                    <input type="file" name="iamgen_producto" accept=".jpg" id="iamgen_producto">
+                </div>
+                </h4>
+                <input class = "botons" type = "submit" value="Editar producto">
+        
+        </section>
+        </section>
 
     <%- include('./partialViews/footer.ejs') %>
 </body>
 </html>
+
