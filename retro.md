@@ -27,3 +27,15 @@ Agregamos el header y footer a la pantalla de Login, y register
 Solucionamos el problema que nos ocasionó borrar los archivos duplicados.
 
 Encontramos algunas clases duplicadas en el css, y corregimos estos errores.
+
+# Fecha: 29/03/2022
+
+Durante la reunión mejoramos el redireccionamiento del sitio, con vistas modularizadas en todos sus componentes. Mejoramos varios aspectos de comunicación entre los integrantes del grupo. Todos los integrantes se encuentran al día con el material de la clase, dadas las vacaciones. 
+
+Raimer logró mejorar el redireccionamiento, ya que faltaban algunos detalles como paquetes, movimiento de archivos a carpetas correctas, y mejoras de archivos en general.
+
+Agregamos tareas al tablero de trabajo, movimos algunas a su lugar correcto.
+
+Discutimos sobre las capacidades "responsive" del sitio, ya que nos encontramos con inconvenientes para que se visualice correctamente en otras resoluciones.
+
+Se implementó el motor de engine EJS, y motor de render.
