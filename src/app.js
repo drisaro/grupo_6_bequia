@@ -12,8 +12,19 @@ app.set("views", "./src/views");
 app.use("/", indexRouter);
 app.use("/productos", productRouter);
 app.use("/usuarios", userRouter);
-//app.use("/createProduct", productRouter);
-//app.use("/updateProduct", productRouter);
+
+
+/*
+/ --> a indexController.index
+/carrito --> a indexController.carrito
+/usuarios/login --> a userController.login
+/usuarios/registro --> a userController.registro
+/productos/id --> a productController.product
+/productos/createProduct a --> productController.createProduct
+/productos/updateProduct a --> productController.updateProduct
+*/
+
+
 
 app.use(express.static(path.join(__dirname,'../public')))
 
