@@ -4,6 +4,12 @@ const controller = {
     },
     product: (req, res) => {
         res.render("productDetail")
+    },
+    createProduct: (req, res) => {
+        res.render("createProduct")
+    },
+    updateProduct: (req, res) => {
+        res.render("updateProduct")
     }
 }
 
