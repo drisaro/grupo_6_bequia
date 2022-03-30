@@ -3,7 +3,7 @@ const controller = {
     res.render("index")
     },
     carrito: (req, res) => {
-        res.render("productCart")
+        res.render("carrito")
     }
 }
 

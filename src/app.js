@@ -20,8 +20,8 @@ app.use("/usuarios", userRouter);
 /usuarios/login --> a userController.login
 /usuarios/registro --> a userController.registro
 /productos/id --> a productController.product
-/productos/createProduct a --> productController.createProduct
-/productos/updateProduct a --> productController.updateProduct
+/productos/createProduct --> a productController.createProduct
+/productos/updateProduct --> a productController.updateProduct
 */
 
 
