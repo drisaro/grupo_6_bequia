@@ -12,8 +12,11 @@ app.set("views", "./src/views");
 app.use("/", indexRouter);
 app.use("/productos", productRouter);
 app.use("/usuarios", userRouter);
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname,'../public')))
 
-
+app.listen(3000,()=>console.log('ejecutando servidor en el puerto 3000'))
 /*
 / --> a indexController.index
 /carrito --> a indexController.carrito
@@ -24,9 +27,6 @@ app.use("/usuarios", userRouter);
 /productos/updateProduct --> a productController.updateProduct
 */
 
-
-
-app.use(express.static(path.join(__dirname,'../public')))
 
 // app.get('/',(req,res)=>{
   
@@ -49,4 +49,3 @@ app.use(express.static(path.join(__dirname,'../public')))
 //     res.sendFile(path.join(__dirname,'/views/productDetail.html'))
 // })
 
-app.listen(3000,()=>console.log('ejecutando servidor en el puerto 3000'))

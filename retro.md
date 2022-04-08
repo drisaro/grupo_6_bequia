@@ -39,3 +39,9 @@ Agregamos tareas al tablero de trabajo, movimos algunas a su lugar correcto.
 Discutimos sobre las capacidades "responsive" del sitio, ya que nos encontramos con inconvenientes para que se visualice correctamente en otras resoluciones.
 
 Se implementó el motor de engine EJS, y motor de render.
+
+--------------
+
+# Fecha: 07/04/2022
+
+Modificamos las rutas de ProductRouter.js / createProduct.ejs / productController.js
