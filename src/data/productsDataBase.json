@@ -1,0 +1,62 @@
+[
+ {
+  "id": 1,
+  "name": "Ojota OJ3022",
+  "price": 9871,
+  "discount": 50,
+  "category": "ojotas",
+  "description": "Aqui, Descripcion del producto ",
+  "image": "/images/Productos/main-ojotas2.jpeg",
+  "show":true
+ },
+ {
+    "id": 2,
+    "name": "Sombrero SO3022",
+    "price": 9871,
+    "discount": 0,
+    "category": "sombreros",
+    "description": "Aqui, Descripcion del producto ",
+    "image": "/images/Productos/main-sombrero2.jpeg",
+    "show":true
+ },
+ {
+    "id": 3,
+    "name": "Traje TR3022",
+    "price": 9871,
+    "discount": 50,
+    "category": "trajes",
+    "description": "Aqui, Descripcion del producto ",
+    "image": "/images/Productos/main-trajedebano2.jpeg",
+    "show":true
+ },
+ {
+    "id": 4,
+    "name": "Anteojos AN3022",
+    "price": 9871,
+    "discount": 0,
+    "category": "anteojos",
+    "description": "Aqui, Descripcion del producto ",
+    "image": "/images/Productos/main-anteojos2.jpeg",
+    "show":true
+ },
+ {
+    "id": 5,
+    "name": "Anteojos AN3032",
+    "price": 9871,
+    "discount": 50,
+    "category": "anteojos",
+    "description": "Aqui, Descripcion del producto ",
+    "image": "/images/Productos/main-anteojos2.jpeg",
+    "show":false
+ },
+ {
+    "id": 6,
+    "name": "Traje TR111",
+    "price": 9871,
+    "discount": 50,
+    "category": "trajes",
+    "description": "Aqui, Descripcion del producto ",
+    "image": "/images/Productos/main-trajedebano2.jpeg",
+    "show":true
+ }
+]

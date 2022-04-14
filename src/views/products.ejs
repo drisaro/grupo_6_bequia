@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partialViews/head.ejs') %>
+
+<body>
+    
+    <%- include('./partialViews/header.ejs') %>
+
+    <main class="main-home">
+
+
+        <h1 class="texto-centrado">Lista de productos</h1>
+
+            <section class="productsList">
+                <% productList.forEach(product=> { %>
+                    <article class="productList-item">
+                        <a href="/productos/<%= product.id%>"><img src="<%= product.image%>" alt="<%= product.name%>"></a>
+                        <p><%= product.price%></p>
+                        <p>40% off</p>
+                        <p><%= product.name%></p>
+                    </article>
+                <% })%>
+                
+               
+            </section>
+
+
+    </main>
+
+    <%- include('./partialViews/footer.ejs') %>
+</body>
+</html>

@@ -8,7 +8,7 @@
         
         <section class="contenedor-productDetail"> 
             <div class="productDetail-img">
-                <img src="/images/ojotas.jpg" alt="" class="productDetail-imgPrincipal">
+                <img src="<%= product.image %>" alt="" class="productDetail-imgPrincipal">
                 <div class="productDetail-carrusel">
                     <img src="/images/ojotas.jpg" alt="">
                     <img src="/images/ojotas.jpg" alt="">
@@ -18,8 +18,8 @@
             </div>
     
             <div class="productDetail-content">
-                <h2>Ojotas de verano amarillo importados</h2>
-                <h3 class="productDetail-precio">$ 1,000</h3>
+                <h2><%= product.name %></h2>
+                <h3 class="productDetail-precio"><%= product.price %></h3>
                 <form action="/carrito" method="GET" class="productDetail-form">
                  <label> Talla 
                      <select name="productDetail-talla" id="">
