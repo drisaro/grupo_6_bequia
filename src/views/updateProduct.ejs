@@ -4,13 +4,13 @@
 <body>
     <%- include('./partialViews/header.ejs') %>
 
-    <form action="/products/updateProduct" method="POST"> 
+    <form action="/productos/updateProduct/<%= product.id %>?_method=PUT" method="POST"> 
         <section class ="fondo-formularios">
         <section class = "form-register">
                 <h4>Editá tu producto</h4>
-                <input class = "controls" type = "text" name="nombre_producto" id="nombre_producto" placeholder="¿Cómo se llama?">
-                <input class = "controls" type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo">
-                <input class = "controls" type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?">
+                <input class = "controls" type = "text" name="nombre_producto" id="nombre_producto" placeholder="¿Cómo se llama?" value="<%= product.nombre_producto %>">
+                <input class = "controls" type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo" value="<%= product.descripcion_producto %>">
+                <input class = "controls" type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?" value="<%= product.precio_producto %>">
                 <h4>
                 <label>¿De qué color es?</label>
                 <select name="color_producto">
@@ -32,8 +32,8 @@
                 </h4>
                 <h4>
                 <div>
-                    <label for="iamgen_producto">Subí una foto:</label>
-                    <input type="file" name="iamgen_producto" accept=".jpg" id="iamgen_producto">
+                    <label for="imagen_producto">Subí una foto:</label>
+                    <input type="file" name="imagen_producto" accept=".jpg" id="imagen_producto">
                 </div>
                 </h4>
                 <input class = "botons" type = "submit" value="Editar producto">
