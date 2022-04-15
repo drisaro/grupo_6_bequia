@@ -15,6 +15,8 @@ const controller = {
         res.render("createProduct")
     },
     updateProduct: (req, res) => {
+        let idProduct=req.params.id;
+        let product=products.find(product=>product.id==idProduct)
         res.render("updateProduct")
     },
     carrito: (req, res) => {

@@ -34,11 +34,15 @@
                 <div class="productDetail-caracteristicas">
                    <strong>Caracteristicas</strong>
                    <p>
-                    Color: <br>
-                    Material:<br>
-                    Marca:<br>
+                    <%= product.description %>
                    </p> 
                 </div>
+
+                <a href="/products/edit/<%= product.id%>" class="action-button edit">EDITAR PRODUCTO</a>
+                <form action="/products/delete/<%= product.id%>" method="POST" style="display: inline-flex">
+                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
+
             </div>
         </section>
         

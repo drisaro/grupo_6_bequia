@@ -26,6 +26,25 @@ main{
     margin: 0 auto;
 }
 
+.action-button {
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    margin-top: 15px;
+  }
+  
+  .action-button.edit {
+    background-color: chocolate;
+  }
+  .action-button.delete {
+    background-color: rgb(248, 69, 37);
+  }
+  
 /*estilos header*/
 header{
     background-color: black;
