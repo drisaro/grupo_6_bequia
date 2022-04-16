@@ -4,7 +4,7 @@
 <body>
     <%- include('./partialViews/header.ejs') %>
 
-    <form action="createProduct" method="POST">    
+    <form action="/productos/createProduct" method="POST">    
         <section class ="fondo-formularios">
         <section class = "form-register">
                 <h4>Creá tu producto</h4>
@@ -24,17 +24,17 @@
                 <h4>
                 <label>Elegí la categoría</label>
                     <select name="categoria_producto">
-                        <option value="lentes_sol">Lentes de sol</option>
+                        <option value="anteojos">Lentes de sol</option>
                         <option value="ojotas">Ojotas</option>
                         <option value="sombreros">Sombreros</option>
-                        <option value="trajes_baño">Trajes de baño</option>
+                        <option value="trajes">Trajes de baño</option>
                     </select>
                 </h4>
                 <h4>
-                <div>
-                    <label for="iamgen_producto">Subí una foto:</label>
-                    <input type="file" name="iamgen_producto" accept=".jpg" id="iamgen_producto">
-                </div>
+<!--                 <div>
+                    <label for="imagen_producto">Subí una foto:</label>
+                    <input type="file" name="imagen_producto" accept=".jpg" id="imagen_producto">
+                </div> -->
                 </h4>
                 <input class = "botons" type = "submit" value="Crear producto">
         

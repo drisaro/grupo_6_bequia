@@ -4,38 +4,40 @@
 <body>
     <%- include('./partialViews/header.ejs') %>
 
-    <form action="/products/updateProduct" method="POST"> 
+    <form action="/productos/edit/<%= product.id %>?_method=PUT" method="POST"> 
         <section class ="fondo-formularios">
         <section class = "form-register">
-                <h4>Editá tu producto</h4>
-                <input class = "controls" type = "text" name="nombre_producto" id="nombre_producto" placeholder="¿Cómo se llama?">
-                <input class = "controls" type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo">
-                <input class = "controls" type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?">
+                <h1>Editá tu producto</h1>
+                <input class = "controls" type = "text" name="nombre_producto" id="nombre_producto" placeholder="¿Cómo se llama?" value="<%= product.nombre_producto %>">
+                <input class = "controls" type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo" value="<%= product.descripcion_producto %>">
+                <input class = "controls" type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?" value="<%= product.precio_producto %>">
                 <h4>
                 <label>¿De qué color es?</label>
                 <select name="color_producto">
-                    <option value="mostaza">Mostaza</option>
-                    <option value="negro">Negro</option>
-                    <option value="blanco">Blanco</option>
-                    <option value="violeta">Violeta</option>
-                    <option value="verde">Verde</option>
+                    <option value="mostaza" <%= product.color_producto == "motaza" ? "selected" : null %> >Mostaza</option>
+                    <option value="negro" <%= product.color_producto == "negro" ? "selected" : null %> >Negro</option>
+                    <option value="blanco" <%= product.color_producto == "blanco" ? "selected" : null %> >Blanco</option>
+                    <option value="violeta" <%= product.color_producto == "violeta" ? "selected" : null %> >Violeta</option>
+                    <option value="verde" <%= product.color_producto == "verde" ? "selected" : null %> >Verde</option>
+                    
                 </select>
                 </h4>              
                 <h4>
                 <label>Elegí la categoría</label>
                     <select name="categoria_producto">
-                        <option value="lentes_sol">Lentes de sol</option>
-                        <option value="ojotas">Ojotas</option>
-                        <option value="sombreros">Sombreros</option>
-                        <option value="trajes_baño">Trajes de baño</option>
+                        <option value="anteojos" <%= product.categoria_producto == "anteojos" ? "selected" : null %> >Lentes de sol</option>
+                        <option value="ojotas" <%= product.categoria_producto == "ojotas" ? "selected" : null %> >Ojotas</option>
+                        <option value="sombreros" <%= product.categoria_producto == "sombreros" ? "selected" : null %> >Sombreros</option>
+                        <option value="trajes" <%= product.categoria_producto == "trajes" ? "selected" : null %> >Trajes de baño</option>
+
                     </select>
                 </h4>
-                <h4>
+                <!-- <h4>
                 <div>
-                    <label for="iamgen_producto">Subí una foto:</label>
-                    <input type="file" name="iamgen_producto" accept=".jpg" id="iamgen_producto">
+                    <label for="imagen_producto">Subí una foto:</label>
+                    <input type="file" name="imagen_producto" accept=".jpg" id="imagen_producto">
                 </div>
-                </h4>
+                </h4> -->
                 <input class = "botons" type = "submit" value="Editar producto">
         
         </section>

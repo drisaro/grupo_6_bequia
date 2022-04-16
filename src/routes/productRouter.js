@@ -2,14 +2,24 @@ const express = require("express");
 const router = express.Router();
 const productController = require("../controllers/productController");
 
+/*** GET ALL PRODUCTS ***/ 
 router.get("/", productController.index);
+
+/*** CREATE ONE PRODUCT ***/ 
 router.get("/createProduct", productController.createProduct);
 router.post("/createProduct", productController.storeProduct);
 
-router.post("/updateProduct", productController.updateProduct);
-router.post("/carrito",productController.carrito);
-//Dejar :id siempre al final
-router.get("/:id", productController.product);
+/*** EDIT ONE PRODUCT ***/ 
+router.get("/edit/:id", productController.editProduct);
+router.put("/edit/:id", productController.updateProduct);
 
+/*** BUY CHART ***/ 
+router.post("/carrito",productController.carrito);
+
+/*** GET ONE PRODUCT ***/ 
+router.get("/:id", productController.product); //Dejar :id siempre al final
+
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/:id', productController.destroy); 
 
 module.exports = router;
