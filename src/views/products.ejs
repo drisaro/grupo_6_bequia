@@ -15,7 +15,7 @@
             <section class="productsList">
                 <% productList.forEach(product=> { %>
                     <article class="productList-item">
-                        <a href="/productos/<%= product.id%>"><img src="<%= product.imagen_producto%>" alt="<%= product.nombre_producto%>"></a>
+                        <a href="/productos/<%= product.id%>"><img src="/images/Productos/<%= product.imagen_producto%>" alt="<%= product.nombre_producto%>"></a>
                         <p><%= product.precio_producto%></p>
                         <p><%= product.nombre_producto%></p>
                     </article>

@@ -4,7 +4,7 @@
 <body>
     <%- include('./partialViews/header.ejs') %>
 
-    <form action="/productos/edit/<%= product.id %>?_method=PUT" method="POST"> 
+    <form action="/productos/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
         <section class ="fondo-formularios">
         <section class = "form-register">
                 <h1>Editá tu producto</h1>
@@ -32,12 +32,12 @@
 
                     </select>
                 </h4>
-                <!-- <h4>
+                <h4>
                 <div>
                     <label for="imagen_producto">Subí una foto:</label>
                     <input type="file" name="imagen_producto" accept=".jpg" id="imagen_producto">
                 </div>
-                </h4> -->
+                </h4>
                 <input class = "botons" type = "submit" value="Editar producto">
         
         </section>

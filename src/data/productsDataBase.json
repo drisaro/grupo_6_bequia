@@ -2,31 +2,31 @@
   {
     "id": 1,
     "nombre_producto": "Ojota OJ3022",
-    "precio_producto": "200",
+    "precio_producto": "500",
     "categoria_producto": "ojotas",
     "descripcion_producto": "nueva descripcion",
     "color_producto": "blanco",
-    "imagen_producto": "/images/Productos/main-ojotas2.jpeg",
+    "imagen_producto": "main-ojotas2.jpeg",
     "mostrar": true
   },
   {
     "id": 2,
-    "nombre_producto": "Sombrero SO3022",
-    "precio_producto": 9871,
+    "nombre_producto": "Sombrero dsfasdf",
+    "precio_producto": "9871",
     "categoria_producto": "sombreros",
-    "descripcion_producto": "Aqui, Descripcion del producto ",
-    "color_producto": "negro",
-    "imagen_producto": "/images/Productos/main-sombrero2.jpeg",
+    "descripcion_producto": "Aqui, Descripcion del prsadfdsaf",
+    "color_producto": "mostaza",
+    "imagen_producto": "main-sombrero2.jpeg",
     "mostrar": true
   },
   {
     "id": 3,
     "nombre_producto": "Traje TR3022",
-    "precio_producto": 9871,
+    "precio_producto": "111",
     "categoria_producto": "trajes",
     "descripcion_producto": "Aqui, Descripcion del producto ",
-    "color_producto": "verde",
-    "imagen_producto": "/images/Productos/main-trajedebano2.jpeg",
+    "color_producto": "mostaza",
+    "imagen_producto": "main-trajedebano2.jpeg",
     "mostrar": true
   },
   {
@@ -36,7 +36,7 @@
     "categoria_producto": "anteojos",
     "descripcion_producto": "Aqui, Descripcion del producto ",
     "color_producto": "violeta",
-    "imagen_producto": "/images/Productos/main-anteojos2.jpeg",
+    "imagen_producto": "main-anteojos2.jpeg",
     "mostrar": true
   },
   {
@@ -46,8 +46,8 @@
     "categoria_producto": "anteojos",
     "descripcion_producto": "Aqui, Descripcion del producto ",
     "color_producto": "blanco",
-    "imagen_producto": "/images/Productos/main-anteojos2.jpeg",
-    "mostrar": false
+    "imagen_producto": "main-anteojos2.jpeg",
+    "mostrar": true
   },
   {
     "id": 6,
@@ -56,7 +56,7 @@
     "categoria_producto": "trajes",
     "descripcion_producto": "Aqui, Descripcion del producto ",
     "color_producto": "mostaza",
-    "imagen_producto": "/images/Productos/main-trajedebano2.jpeg",
+    "imagen_producto": "main-trajedebano2.jpeg",
     "mostrar": true
   },
   {
@@ -66,8 +66,8 @@
     "precio_producto": "50",
     "color_producto": "negro",
     "categoria_producto": "ojotas",
-    "imagen_producto": "/images/Productos/main-ojotas2.jpeg",
-    "mostrar": true
+    "imagen_producto": "main-ojotas2.jpeg",
+    "mostrar": false
   },
   {
     "id": 8,
@@ -76,7 +76,57 @@
     "precio_producto": "10",
     "color_producto": "violeta",
     "categoria_producto": "sombreros",
-    "imagen_producto": "/images/Productos/main-ojotas2.jpeg",
+    "imagen_producto": "main-ojotas2.jpeg",
+    "mostrar": true
+  },
+  {
+    "id": 9,
+    "nombre_producto": "Ojota 111",
+    "descripcion_producto": "dsfsadfsd",
+    "precio_producto": "120",
+    "color_producto": "mostaza",
+    "categoria_producto": "ojotas",
+    "imagen_producto": "main-ojotas2.jpeg",
     "mostrar": false
+  },
+  {
+    "id": 10,
+    "nombre_producto": "Ojota 333",
+    "descripcion_producto": "descripcion ojota 333",
+    "precio_producto": "333",
+    "color_producto": "negro",
+    "categoria_producto": "ojotas",
+    "imagen_producto": "main-ojotas2.jpeg",
+    "mostrar": false
+  },
+  {
+    "id": 11,
+    "nombre_producto": "Traje 2222",
+    "descripcion_producto": "descripcion del traje 222",
+    "precio_producto": "222",
+    "color_producto": "violeta",
+    "categoria_producto": "trajes",
+    "imagen_producto": "default-image.png",
+    "mostrar": true
+  },
+  {
+    "id": 12,
+    "nombre_producto": "traje 333",
+    "descripcion_producto": "descripcion",
+    "precio_producto": "333",
+    "color_producto": "mostaza",
+    "categoria_producto": "trajes",
+    "imagen_producto": "imagen_producto-1650328207306-179711397.jpg",
+    "mostrar": true
+  },
+  {
+    "id": 13,
+    "nombre_producto": "Ojota 111",
+    "descripcion_producto": "nueva descripcion",
+    "precio_producto": "111",
+    "color_producto": "mostaza",
+    "categoria_producto": "ojotas",
+    "imagen_producto": "imagen_producto-1650328044731-812177416.jpg",
+    "mostrar": true
   }
 ]

@@ -7,8 +7,10 @@ const userRouter = require("./routes/userRouter");
 const methodOverride =  require('method-override');
 
 
+
 app.set("view engine", "ejs");
 app.set("views", "./src/views");
+
 
 
 app.use(express.json());
