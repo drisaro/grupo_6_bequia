@@ -138,5 +138,15 @@
     "categoria_producto": "sombreros",
     "imagen_producto": "imagen_producto-1650588549076-434443760.jpg",
     "mostrar": false
+  },
+  {
+    "id": 15,
+    "nombre_producto": "PRUEBAAAAAa",
+    "descripcion_producto": "aaa",
+    "precio_producto": "aasdc",
+    "color_producto": "mostaza",
+    "categoria_producto": "anteojos",
+    "imagen_producto": "imagen_producto-1650592611107-243047921.jpg",
+    "mostrar": true
   }
 ]
