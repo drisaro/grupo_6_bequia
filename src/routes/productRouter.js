@@ -28,7 +28,7 @@ router.get("/edit/:id", productController.editProduct);
 router.put("/edit/:id",upload.single("imagen_producto"), productController.updateProduct);
 
 /*** BUY CHART ***/ 
-router.post("/carrito",productController.carrito);
+router.get("/carrito",productController.carrito);
 
 /*** GET ONE PRODUCT ***/ 
 router.get("/:id", productController.product); //Dejar :id siempre al final

@@ -32,11 +32,11 @@
   {
     "id": 4,
     "nombre_producto": "Anteojos AN3022",
-    "precio_producto": 9871,
+    "precio_producto": "9871",
     "categoria_producto": "anteojos",
-    "descripcion_producto": "Aqui, Descripcion del producto ",
+    "descripcion_producto": "Aqui, Descripcion del producto",
     "color_producto": "violeta",
-    "imagen_producto": "main-anteojos2.jpeg",
+    "imagen_producto": "default-image.png",
     "mostrar": true
   },
   {
@@ -128,5 +128,15 @@
     "categoria_producto": "ojotas",
     "imagen_producto": "imagen_producto-1650328044731-812177416.jpg",
     "mostrar": true
+  },
+  {
+    "id": 14,
+    "nombre_producto": "bici",
+    "descripcion_producto": "bici",
+    "precio_producto": "6666",
+    "color_producto": "blanco",
+    "categoria_producto": "sombreros",
+    "imagen_producto": "imagen_producto-1650588549076-434443760.jpg",
+    "mostrar": false
   }
 ]

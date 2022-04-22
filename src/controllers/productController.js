@@ -27,39 +27,13 @@ const controller = {
     createProduct: (req, res) => {
         res.render("createProduct")
     },
-    updateProduct: (req, res) => {
-        const id = req.params.id;
-		let products = readDB();
-		products = products.map(product => {
-			if(product.id == id){
-				product.nombre_producto = req.body.nombre_producto,
-				product.precio_producto = req.body.precio_producto,
-				product.categoria_producto = req.body.categoria_producto,
-				product.descripcion_producto = req.body.descripcion_producto,
-                product.color_producto = req.body.color_producto
-				product.imagen_producto = req.file?.filename ?? "default-image.png"
-			}
-			return product;
-		});
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-		return res.redirect("/productos");
-    },
-    // Update - Form to edit
-    editProduct: (req, res) => {
-		const id = req.params.id;
-        const products = readDB();
-		const product = products.find(product => product.id == id);
-		return res.render("updateProduct", { product });
-    },
-    // 
+	// Create - Form to save product
     storeProduct: (req, res) => {
         const products = readDB();
 		const productoNuevo = {
 			id: products.length > 0 ? products[ products.length - 1 ].id + 1 : 1,
 			...req.body,
 			imagen_producto: req.file?.filename ?? "default-image.png",
-            //imagen_producto: req.file.filename,
-            //imagen_producto: "/images/Productos/main-ojotas2.jpeg",
             mostrar:true
 		}
 
@@ -68,6 +42,31 @@ const controller = {
 
 		return res.redirect("/productos")
 	},
+    // Update - Form to edit
+    editProduct: (req, res) => {
+		const id = req.params.id;
+        const products = readDB();
+		const product = products.find(product => product.id == id);
+		return res.render("updateProduct", { product });
+    },
+		// Update - Form to save changes
+		updateProduct: (req, res) => {
+			const id = req.params.id;
+			let products = readDB();
+			products = products.map(product => {
+				if(product.id == id){
+					product.nombre_producto = req.body.nombre_producto,
+					product.precio_producto = req.body.precio_producto,
+					product.categoria_producto = req.body.categoria_producto,
+					product.descripcion_producto = req.body.descripcion_producto,
+					product.color_producto = req.body.color_producto
+					product.imagen_producto = req.file?.filename ?? "default-image.png"
+				}
+				return product;
+			});
+			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+			return res.redirect("/productos");
+		},
     // Detail - Detail of buy chart
     carrito: (req, res) => {
         res.render("carrito")
