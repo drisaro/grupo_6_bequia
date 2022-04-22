@@ -2,21 +2,21 @@
   {
     "id": 1,
     "nombre_producto": "Ojota OJ3022",
-    "precio_producto": "500",
+    "precio_producto": "50000",
     "categoria_producto": "ojotas",
     "descripcion_producto": "nueva descripcion",
     "color_producto": "blanco",
-    "imagen_producto": "main-ojotas2.jpeg",
+    "imagen_producto": "imgProd",
     "mostrar": true
   },
   {
     "id": 2,
-    "nombre_producto": "Sombrero dsfasdf",
+    "nombre_producto": "Sombrero AAAA",
     "precio_producto": "9871",
     "categoria_producto": "sombreros",
     "descripcion_producto": "Aqui, Descripcion del prsadfdsaf",
     "color_producto": "mostaza",
-    "imagen_producto": "main-sombrero2.jpeg",
+    "imagen_producto": "imagen_producto-1650591974469-729567776.jpg",
     "mostrar": true
   },
   {
@@ -76,7 +76,7 @@
     "precio_producto": "10",
     "color_producto": "violeta",
     "categoria_producto": "sombreros",
-    "imagen_producto": "main-ojotas2.jpeg",
+    "imagen_producto": "default-image.png",
     "mostrar": true
   },
   {
@@ -113,20 +113,20 @@
     "id": 12,
     "nombre_producto": "traje 333",
     "descripcion_producto": "descripcion",
-    "precio_producto": "333",
+    "precio_producto": "5549",
     "color_producto": "mostaza",
     "categoria_producto": "trajes",
-    "imagen_producto": "imagen_producto-1650328207306-179711397.jpg",
+    "imagen_producto": "default-image.png",
     "mostrar": true
   },
   {
     "id": 13,
     "nombre_producto": "Ojota 111",
     "descripcion_producto": "nueva descripcion",
-    "precio_producto": "111",
+    "precio_producto": "4543",
     "color_producto": "mostaza",
     "categoria_producto": "ojotas",
-    "imagen_producto": "imagen_producto-1650328044731-812177416.jpg",
+    "imagen_producto": "default-image.png",
     "mostrar": true
   },
   {
