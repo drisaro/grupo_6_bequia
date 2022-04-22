@@ -31,14 +31,17 @@ const controller = {
         const id = req.params.id;
 		let products = readDB();
 		products = products.map(product => {
+
 			if(product.id == id){
 				product.nombre_producto = req.body.nombre_producto,
 				product.precio_producto = req.body.precio_producto,
 				product.categoria_producto = req.body.categoria_producto,
 				product.descripcion_producto = req.body.descripcion_producto,
                 product.color_producto = req.body.color_producto
-				product.imagen_producto = req.file?.filename ?? "default-image.png"
+
+				product.imagen_producto = req.file?.filename ?? product.imagen_producto
 			}
+
 			return product;
 		});
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))

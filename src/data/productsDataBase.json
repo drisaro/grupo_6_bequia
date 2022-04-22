@@ -73,7 +73,7 @@
     "id": 8,
     "nombre_producto": "Ojota 222",
     "descripcion_producto": "ojota 222 descripcion",
-    "precio_producto": "10",
+    "precio_producto": "1111",
     "color_producto": "violeta",
     "categoria_producto": "sombreros",
     "imagen_producto": "main-ojotas2.jpeg",
@@ -123,10 +123,10 @@
     "id": 13,
     "nombre_producto": "Ojota 111",
     "descripcion_producto": "nueva descripcion",
-    "precio_producto": "111",
+    "precio_producto": "2222",
     "color_producto": "mostaza",
     "categoria_producto": "ojotas",
-    "imagen_producto": "imagen_producto-1650328044731-812177416.jpg",
+    "imagen_producto": "imagen_producto-1650591827965-701530875.jpg",
     "mostrar": true
   }
 ]
