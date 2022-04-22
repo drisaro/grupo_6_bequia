@@ -1,21 +1,12 @@
 [
   {
     "id": 1,
-<<<<<<< HEAD
-    "nombre_producto": "Ojota OJ3023",
-    "precio_producto": "18000",
-=======
     "nombre_producto": "Ojota OJ3022",
     "precio_producto": "50000",
->>>>>>> e452d9e44535880df2f433b0e59ee302ca75d534
     "categoria_producto": "ojotas",
     "descripcion_producto": "Vieja descripcion",
     "color_producto": "blanco",
-<<<<<<< HEAD
-    "imagen_producto": "default-image.png",
-=======
     "imagen_producto": "imgProd",
->>>>>>> e452d9e44535880df2f433b0e59ee302ca75d534
     "mostrar": true
   },
   {
