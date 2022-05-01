@@ -4,36 +4,68 @@
 <body>
     <%- include('./partialViews/header.ejs') %>
 
+    <!-- <% if (locals.errors) {
+        for (let error in errors) {
+        %>
+            <p><%= errors[error].msg %></p>
+
+    <% } }%> -->
     <form action="/productos/createProduct" method="POST" enctype="multipart/form-data">    
         <section class ="fondo-formularios">
         <section class = "form-register">
                 <h4>Creá tu producto</h4>
-                <input class = "controls" type = "text" name="nombre_producto" id="nombre_producto" placeholder="¿Cómo se llama?">
-                <input class = "controls" type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo">
-                <input class = "controls" type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?">
+                <input class = "controls <%= locals.errors && errors.nombre_producto ? 'is-invalid':null %>" 
+                type = "text" name="nombre_producto" id="nombre_producto" 
+                placeholder="¿Cómo se llama?"  
+                value="<%= locals.oldData? oldData.nombre_producto:null %>">
+                <% if(locals.errors && errors.nombre_producto){ %>
+                    <span class="text-danger"><%= errors.nombre_producto.msg %></span>
+                <% } %>
+                 
+                <input class = "controls <%= locals.errors && errors.descripcion_producto ? 'is-invalid':null %>" 
+                type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo"
+                value="<%= locals.oldData? oldData.descripcion_producto:null %>">
+                <% if(locals.errors && errors.descripcion_producto){ %>
+                    <span class="text-danger"><%= errors.descripcion_producto.msg %></span>
+                <% } %>
+                <input class = "controls <%= locals.errors && errors.precio_producto ? 'is-invalid':null %>" 
+                type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?"
+                value="<%= locals.oldData? oldData.precio_producto:null %>">
+                <% if(locals.errors && errors.precio_producto){ %>
+                    <span class="text-danger"><%= errors.precio_producto.msg %></span>
+                <% } %>
                 <h4>
                 <label>¿De qué color es?</label>
                 <select name="color_producto">
-                    <option value="mostaza">Mostaza</option>
-                    <option value="negro">Negro</option>
-                    <option value="blanco">Blanco</option>
-                    <option value="violeta">Violeta</option>
-                    <option value="verde">Verde</option>
+                    <option value="mostaza" <%= locals.oldData && (oldData.color_producto==='mostaza') ? 'selected':null %> >Mostaza</option>
+                    <option value="negro" <%= locals.oldData && (oldData.color_producto==='negro') ? 'selected':null %> >Negro</option>
+                    <option value="blanco" <%= locals.oldData && (oldData.color_producto==='blanco') ? 'selected':null %> >Blanco</option>
+                    <option value="violeta" <%= locals.oldData && (oldData.color_producto==='violeta') ? 'selected':null %> >Violeta</option>
+                    <option value="verde" <%= locals.oldData && (oldData.color_producto==='verde') ? 'selected':null %> >Verde</option>
                 </select>
+                <% if(locals.errors && errors.color_producto){ %>
+                    <span class="text-danger"><%= errors.color_producto.msg %></span>
+                <% } %>
                 </h4>              
                 <h4>
                 <label>Elegí la categoría</label>
                     <select name="categoria_producto">
-                        <option value="anteojos">Lentes de sol</option>
-                        <option value="ojotas">Ojotas</option>
-                        <option value="sombreros">Sombreros</option>
-                        <option value="trajes">Trajes de baño</option>
+                        <option value="anteojos" <%= locals.oldData && (oldData.categoria_producto==='anteojos') ? 'selected':null %> >Lentes de sol</option>
+                        <option value="ojotas"<%= locals.oldData && (oldData.categoria_producto==='ojotas') ? 'selected':null %> >Ojotas</option>
+                        <option value="sombreros" <%= locals.oldData && (oldData.categoria_producto==='sombreros') ? 'selected':null %> >Sombreros</option>
+                        <option value="trajes" <%= locals.oldData && (oldData.categoria_producto==='trajes') ? 'selected':null %> >Trajes de baño</option>
                     </select>
+                <% if(locals.errors && errors.categoria_producto){ %>
+                    <span class="text-danger"><%= errors.categoria_producto.msg %></span>
+                <% } %>   
                 </h4>
                 <h4>
                 <div>
                     <label for="imagen_producto">Subí una foto:</label>
                     <input type="file" name="imagen_producto" accept=".jpg" id="imagen_producto">
+                    <% if(locals.errors && errors.imagen_producto){ %>
+                        <span class="text-danger"><%= errors.imagen_producto.msg %></span>
+                    <% } %>
                 </div>
                 </h4>
                 <input class = "botons" type = "submit" value="Crear producto">

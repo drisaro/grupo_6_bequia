@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const {validationResult}=require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 //let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -56,18 +57,29 @@ const controller = {
     },
     // 
     storeProduct: (req, res) => {
-        const products = readDB();
-		const productoNuevo = {
-			id: products.length > 0 ? products[ products.length - 1 ].id + 1 : 1,
-			...req.body,
-			imagen_producto: req.file?.filename ?? "default-image.png",
-            mostrar:true
+		const resultValidation=validationResult(req)
+		//return res.send(resultValidation.mapped())
+		if(resultValidation.errors.length>0){
+			return res.render('createProduct',{
+				errors:resultValidation.mapped(), //mapped convierte el array en un objeto literal
+				oldData:req.body,
+			})
+		}else{
+			const products = readDB();
+			const productoNuevo = {
+				id: products.length > 0 ? products[ products.length - 1 ].id + 1 : 1,
+				...req.body,
+				imagen_producto: req.file?.filename ?? "default-image.png",
+				mostrar:true
+			}
+
+			products.push(productoNuevo);
+			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+
+			return res.redirect("/productos")
 		}
 
-		products.push(productoNuevo);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-
-		return res.redirect("/productos")
+        
 	},
     // Update - Form to edit
     editProduct: (req, res) => {
@@ -87,7 +99,7 @@ const controller = {
 					product.categoria_producto = req.body.categoria_producto,
 					product.descripcion_producto = req.body.descripcion_producto,
 					product.color_producto = req.body.color_producto
-					product.imagen_producto = req.file?.filename ?? "default-image.png"
+					product.imagen_producto = req.file?.filename ?? product.imagen_producto
 				}
 				return product;
 			});
