@@ -41,7 +41,7 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage: storage })
 
-/*** GET ALL PRODUCTS ***/ 
+/*** GET ALL THE PRODUCTS ***/ 
 router.get("/", productController.index);
 
 /*** CREATE ONE PRODUCT ***/ 
