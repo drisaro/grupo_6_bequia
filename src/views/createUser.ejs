@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partialViews/head.ejs') %>
+<body>
+    <%- include('./partialViews/header.ejs') %>
+
+    <!-- <% if (locals.errors) {
+        for (let error in errors) {
+        %>
+            <p><%= errors[error].msg %></p>
+
+    <% } }%> -->
+    <form action="/usuarios/createUser" method="POST" enctype="multipart/form-data">    
+        <section class ="fondo-formularios">
+        <section class = "form-register">
+                <h4>Creá tu usuario</h4>
+                <input class = "controls <%= locals.errors && errors.nombre_usuario ? 'is-invalid':null %>" 
+                type = "text" name="nombre_usuario" id="nombre_usuario" 
+                placeholder="¿Cómo te llamas?"  
+                value="<%= locals.oldData? oldData.nombre_usuario:null %>">
+                <% if(locals.errors && errors.nombre_usuario){ %>
+                    <span class="text-danger"><%= errors.nombre_usuario.msg %></span>
+                <% } %>
+                 
+                <input class = "controls <%= locals.errors && errors.apellidos_usuario ? 'is-invalid':null %>" 
+                type = "text" name="apellidos_usuario" id="apellidos_usuario" placeholder="Apellidos"
+                value="<%= locals.oldData? oldData.apellidos_usuario:null %>">
+                <% if(locals.errors && errors.apellidos_usuario){ %>
+                    <span class="text-danger"><%= errors.apellidos_usuario.msg %></span>
+                <% } %>
+                <input class = "controls <%= locals.errors && errors.email_usuario ? 'is-invalid':null %>" 
+                type = "text" name="email_usuario" id="email_usuario" placeholder="Email"
+                value="<%= locals.oldData? oldData.email_usuario:null %>">
+                <% if(locals.errors && errors.email_usuario){ %>
+                    <span class="text-danger"><%= errors.email_usuario.msg %></span>
+                <% } %>
+                <input class = "controls <%= locals.errors && errors.password_usuario ? 'is-invalid':null %>" 
+                type = "text" name="password_usuario" id="password_usuario" placeholder="Contraseña"
+                value="<%= locals.oldData? oldData.password_usuario:null %>">
+                <% if(locals.errors && errors.password_usuario){ %>
+                    <span class="text-danger"><%= errors.password_usuario.msg %></span>
+                <% } %>
+                <h4>
+                <label>¿Qué categoría de usuario sos?</label>
+                <select name="categoria_usuario">
+                    <option value="admin" <%= locals.oldData && (oldData.categoria_usuario==='admin') ? 'selected':null %> >Admninistrador</option>
+                    <option value="vendedor" <%= locals.oldData && (oldData.categoria_usuario==='vendedor') ? 'selected':null %> >Vendedor</option>
+                </select>
+                <% if(locals.errors && errors.categoria_usuario){ %>
+                    <span class="text-danger"><%= errors.categoria_usuario.msg %></span>
+                <% } %>
+                </h4>              
+                <h4>
+                <div>
+                    <label for="imagen_usuario">Subí una foto:</label>
+                    <input type="file" name="imagen_usuario" accept=".jpg" id="imagen_usuario">
+                    <% if(locals.errors && errors.imagen_usuario){ %>
+                        <span class="text-danger"><%= errors.imagen_usuario.msg %></span>
+                    <% } %>
+                </div>
+                </h4>
+                <input class = "botons" type = "submit" value="Crear usuario">
+        
+        </section>
+        </section>
+    </form>
+    <%- include('./partialViews/footer.ejs') %>
+</body>
+</html>
+
+
+
+
+
