@@ -27,7 +27,7 @@
     "descripcion_producto": "Aqui, Descripcion del producto ",
     "color_producto": "mostaza",
     "imagen_producto": "main-trajedebano2.jpeg",
-    "mostrar": true
+    "mostrar": false
   },
   {
     "id": 4,
