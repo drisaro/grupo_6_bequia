@@ -5,6 +5,8 @@
     <%- include('./partialViews/header.ejs') %>
 
     <main class="main-productDetail">
+
+        <% if(typeof userData !='undefined' ){%>
         
         <section class="contenedor-productDetail"> 
             <div class="productDetail-img">
@@ -26,7 +28,13 @@
             </div>
         </section>
         
-       
+        <%}else {%>
+
+            <h1>NO ESTÁS LOGUEADO</h1>
+            <a href="/usuarios/login">Inicia sesión aquí</a>
+    
+        <%}%>
+
     </main>
    
     <%- include('./partialViews/footer.ejs') %>
