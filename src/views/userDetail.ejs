@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partialViews/head.ejs') %>
+<body>
+    <%- include('./partialViews/header.ejs') %>
+
+    <main class="main-productDetail">
+        
+        <section class="contenedor-productDetail"> 
+            <div class="productDetail-img">
+                <img src="/images/Users/<%= user.imagen_usuario %>" alt="" class="productDetail-imgPrincipal">
+            </div>
+    
+            <div class="productDetail-content">
+                <h2><%= user.nombre_usuario %></h2>
+                <h3 class="productDetail-precio"><%= user.apellidos_usuario %></h3>
+                <h3 class="productDetail-precio"><%= user.email_usuario %></h3>
+                <h3 class="productDetail-precio"><%= user.categoria_usuario %></h3>
+                
+
+                <a href="/usuarios/edit/<%= user.id%>" class="action-button edit">EDITAR USUARIO</a>
+                <form action="/usuarios/<%= user.id%>?_method=delete" method="POST" style="display: inline-flex">
+                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
+
+            </div>
+        </section>
+        
+       
+    </main>
+   
+    <%- include('./partialViews/footer.ejs') %>
+</body>
+</html>

@@ -1,53 +1,62 @@
 [
-    {
-      "id": 1,
-      "nombre_usuario": "Fidel",
-      "apellidos_usuario": "Costa",
-      "email_usuario": "fidel12@gmail.com",
-      "password_usuario": "12345678",
-      "categoria_usuario": "vendedor",
-      "imagen_usuario": "/images/usuarios/default.jpeg",
-      "mostrar": true
-    },
-    {
-        "id": 2,
-        "nombre_usuario": "Lucas",
-        "apellidos_usuario": "Barela",
-        "email_usuario": "lucasbarela@gmail.com",
-        "password_usuario": "12345678",
-        "categoria_usuario": "admin",
-        "imagen_usuario": "/images/usuarios/default.jpeg",
-        "mostrar": true
-      },
-      {
-        "id": 3,
-        "nombre_usuario": "David",
-        "apellidos_usuario": "Risaro",
-        "email_usuario": "drisaro@gmail.com",
-        "password_usuario": "12345678",
-        "categoria_usuario": "admin",
-        "imagen_usuario": "/images/usuarios/default.jpeg",
-        "mostrar": true
-      },
-      {
-        "id": 4,
-        "nombre_usuario": "Raimer",
-        "apellidos_usuario": "Cruz",
-        "email_usuario": "raimercm@gmail.com",
-        "password_usuario": "12345678",
-        "categoria_usuario": "admin",
-        "imagen_usuario": "/images/usuarios/default.jpeg",
-        "mostrar": true
-      },
-      {
-        "id": 5,
-        "nombre_usuario": "Anna",
-        "apellidos_usuario": "Cernik",
-        "email_usuario": "annacernik@gmail.com",
-        "password_usuario": "12345678",
-        "categoria_usuario": "admin",
-        "imagen_usuario": "/images/usuarios/default.jpeg",
-        "mostrar": true
-      }
-    
-  ]
+  {
+    "id": 1,
+    "nombre_usuario": "Fidel",
+    "apellidos_usuario": "Costa",
+    "email_usuario": "fidel12@gmail.com",
+    "password_usuario": "12345678",
+    "categoria_usuario": "vendedor",
+    "imagen_usuario": "avatar1.jpg",
+    "mostrar": true
+  },
+  {
+    "id": 2,
+    "nombre_usuario": "Lucas",
+    "apellidos_usuario": "Barela",
+    "email_usuario": "lucasbarela@gmail.com",
+    "password_usuario": "12345678",
+    "categoria_usuario": "admin",
+    "imagen_usuario": "avatar2.jpg",
+    "mostrar": true
+  },
+  {
+    "id": 3,
+    "nombre_usuario": "David",
+    "apellidos_usuario": "Risaro",
+    "email_usuario": "drisaro@gmail.com",
+    "password_usuario": "12345678",
+    "categoria_usuario": "admin",
+    "imagen_usuario": "avatar3.jpg",
+    "mostrar": true
+  },
+  {
+    "id": 4,
+    "nombre_usuario": "RAIMER",
+    "apellidos_usuario": "Cruz",
+    "email_usuario": "raimercm@gmail.com",
+    "password_usuario": "9874654",
+    "categoria_usuario": "admin",
+    "imagen_usuario": "imagen_usuario-1651445645578-247391820.jpg",
+    "mostrar": true
+  },
+  {
+    "id": 5,
+    "nombre_usuario": "Anna",
+    "apellidos_usuario": "Cernik",
+    "email_usuario": "annacernik@gmail.com",
+    "password_usuario": "12345678",
+    "categoria_usuario": "admin",
+    "imagen_usuario": "avatar5.jpg",
+    "mostrar": false
+  },
+  {
+    "id": 6,
+    "nombre_usuario": "Lulu",
+    "apellidos_usuario": "b",
+    "email_usuario": "LUCAS@HOTMIAL.COM",
+    "password_usuario": "215616515",
+    "categoria_usuario": "vendedor",
+    "imagen_usuario": "imagen_usuario-1651447242133-549873112.jpg",
+    "mostrar": true
+  }
+]

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partialViews/head.ejs') %>
+<body>
+    <%- include('./partialViews/header.ejs') %>
+
+    <form action="/usuarios/edit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+        <section class ="fondo-formularios">
+        <section class = "form-register">
+                <h1>Editá tu usuario</h1>
+                <input class = "controls" type = "text" name="nombre_usuario" id="nombre_usuarios" placeholder="¿Cuál es tu nombre?" value="<%= user.nombre_usuario %>">
+                <input class = "controls" type = "text" name="apellidos_usuario" id="apellidos_usuarios" placeholder="¿Y tus apellidos?" value="<%= user.apellidos_usuario %>">
+                <input class = "controls" type = "text" name="email_usuario" id="email_usuarios" placeholder="¿Cómo es tu email?" value="<%= user.email_usuario %>">
+                <input class = "controls" type = "text" name="password_usuario" id="password_usuarios" placeholder="Nueva contraseña" value="<%= user.password_usuario %>">
+                <h4>
+                <label>¿Cuál es tu categoría?</label>
+                <select name="categoria_usuario">
+                    <option value="admin" <%= user.categoria_usuario == "admin" ? "selected" : null %> >Administrador</option>
+                    <option value="vendedor" <%= user.categoria_usuario == "vendedor" ? "selected" : null %> >Vendedor</option>
+                </select>
+                </h4>              
+                <h4>
+                <div>
+                    <label for="imagen_usuario">Subí una foto al estilo Selfie:</label>
+                    <input type="file" name="imagen_usuario" accept=".jpg" id="imagen_usuario" >
+                </div>
+                </h4>
+                <input class = "botons" type = "submit" value="Editar usuario">
+        
+        </section>
+        </section>
+    </form>
+
+    <%- include('./partialViews/footer.ejs') %>
+</body>
+</html>
+
