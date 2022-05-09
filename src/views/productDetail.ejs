@@ -39,17 +39,23 @@
                    </p> 
                 </div>
 
+                <% if(typeof userData !='undefined' ){%>
+
                 <a href="/productos/edit/<%= product.id%>" class="action-button edit">EDITAR PRODUCTO</a>
                 <form action="/productos/<%= product.id%>?_method=delete" method="POST" style="display: inline-flex">
                     <button type="submit" class="action-button delete">ELIMINAR</button>
                 </form>
 
+                <%}else {%>
+            
+                <%}%>
+
             </div>
         </section>
         
-       
     </main>
    
     <%- include('./partialViews/footer.ejs') %>
+    
 </body>
 </html>

@@ -7,13 +7,34 @@
     </div>
     <div class="header-center">
          <h2><a href="/"> BEQUIA </a></h2>
+         <h5>
+        <!-- Esta partecita de cod es la que guarda los datos de session del usuario -->
+
+        <% if(typeof userData !='undefined' ){%>
+
+            <p><%= userData.email_usuario %></p>
+
+        <%}else {%>
+        
+        <%}%>
+        <!-- Hasta acá -->
+        </h5>
     </div>
     <div class="header-right">
+
+    <% if(typeof userData !='undefined' ){%>
+
+       <a href="/usuarios/logout" class="registrarse">LOGOUT</a>
+
+    <%}else {%>
+    
         <a href="/login" class="link-user"><i class="fa-solid fa-user"></i></a>
-        <a href="/usuarios/registro" class="registrarse">REGISTRARSE</a>
+        <a href="/usuarios/createUser" class="registrarse">REGISTRARSE</a>
         <a href="/usuarios/login" class="ingresar">INGRESAR</a> 
+
+    <%}%>
+
         <a href="/productos/carrito" class="link-cart"><i class="fa-solid fa-cart-shopping"></i></a>
-        
         
     </div>
 

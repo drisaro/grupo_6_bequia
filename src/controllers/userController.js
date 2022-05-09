@@ -68,7 +68,7 @@ const controller = {
 		fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2))
 		return res.redirect("/usuarios");
 	},
-        // Create - Form to create
+    // Create - Form to create
     createUser: (req, res) => {
         res.render("createUser")
     },
@@ -97,23 +97,59 @@ const controller = {
 		}
  
 	},
+	// Login - Form to login
+    login: (req, res) => {
+        res.render("login.ejs")
+        },
+	// Login - Form to process login
+	processLogin: (req, res) => {
 
+	const resultValidation=validationResult(req)
+
+	if(resultValidation.errors.length>0){
+		return res.render('login',{
+			errors:resultValidation.mapped(),
+			oldData:req.body,
+		})
+	}
+	else {
+		
+		const email = req.body.email_usuario
+		const password = req.body.password_usuario
+
+		const users = readDB();
+		const usuario = users.find(user => user.email_usuario == email && user.password_usuario == password);
+
+		if (usuario){
+
+			req.session.user = { //se guardan aca porque ahi sabemos que pasaron las validaciones
+				email_usuario: req.body.email_usuario
+			}
+			const user = {      //aca por ej guardamos TODO el usuario en una constante porque las validaciones estan OK
+				...req.body
+			}
+			res.locals.userData = {
+				email_usuario: user.email_usuario
+			}
+	
+			return res.render("userDetail", { user: usuario });
+		}
+
+		else {
+			res.render("login")
+		}
+
+		}
+
+		},
+	// Logout
+	logout: (req, res)=>{
+		req.session.destroy();
+		//res.clearCookie("color")
+		return res.redirect("/")
+	},
+	
 }
 
 module.exports=controller
 
-/*const controller = {
-    index: (req, res) => {
-        res.render("users.ejs")
-        },
-
-    login: (req, res) => {
-        res.render("login.ejs")
-        },
-
-    register: (req, res) => {
-        res.render("register.ejs")
-    }
-}
-
-module.exports=controller*/

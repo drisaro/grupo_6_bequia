@@ -9,6 +9,7 @@
 
     <main class="main-home">
 
+        <% if(typeof userData !='undefined' ){%>
 
         <h1 class="texto-centrado">Lista de usuarios</h1>
 
@@ -19,13 +20,19 @@
                         <p><%= user.nombre_usuario%></p>
                     </article>
                 <% })%>
-                
-               
             </section>
+        
+            <%}else {%>
 
+                <h1>NO ESTÁS LOGUEADO</h1>
+                <a href="/usuarios/login">Inicia sesión aquí</a>
+        
+            <%}%>
 
     </main>
 
     <%- include('./partialViews/footer.ejs') %>
+
 </body>
 </html>
+

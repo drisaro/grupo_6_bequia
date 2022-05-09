@@ -6,12 +6,18 @@
 
     <%- include('./partialViews/header.ejs') %>
 
-<form action="login" method="GET"> 
+<form action="/usuarios/login" method="POST"> 
     <section class ="fondo-formularios">
     <section class = "form-register form-login"> 
         <h4>Formulario login</h4>
         <input class = "controls" type = "text" name="email_usuario" id="email_usuario" placeholder="Ingrese su correo">
+        <% if(locals.errors && errors.email_usuario){ %>
+            <span class="text-danger"><%= errors.email_usuario.msg %></span>
+        <% } %>
         <input class = "controls" type = "password" name="password_usuario" id="password_usuario" placeholder="Ingrese su contraseña">
+        <% if(locals.errors && errors.password_usuario){ %>
+            <span class="text-danger"><%= errors.password_usuario.msg %></span>
+        <% } %>
         <input class = "botons" type = "submit" value="Ingresar">
 
     </section>

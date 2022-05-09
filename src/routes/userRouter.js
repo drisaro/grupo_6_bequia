@@ -5,6 +5,7 @@ const path=require('path');
 const multer =require('multer');
 const {body}=require('express-validator')
 
+const validations_login = require("../../middlewares/expressValidator_login");
 
 const validations=[
     body('nombre_usuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
@@ -51,6 +52,13 @@ router.get("/",userController.index);
 router.get("/createUser", userController.createUser);
 router.post("/createUser", upload.single("imagen_usuario"), validations, userController.storeUser);
 
+/*** USER LOGIN***/ 
+router.get("/login",userController.login);
+router.post("/login", validations_login, userController.processLogin);
+
+/*** USER LOGOUT***/ 
+router.get("/logout", userController.logout)
+
 /*** EDIT ONE USER ***/ 
 router.get("/edit/:id", userController.editUser);
 router.put("/edit/:id",upload.single("imagen_usuario"), userController.updateUser);
@@ -60,9 +68,6 @@ router.get("/:id",userController.user);
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', userController.destroy); 
-
-
-//router.get("/login",userController.login);
 
 
 module.exports = router;

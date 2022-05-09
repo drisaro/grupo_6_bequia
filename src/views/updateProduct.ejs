@@ -4,6 +4,8 @@
 <body>
     <%- include('./partialViews/header.ejs') %>
 
+    <% if(typeof userData !='undefined' ){%>
+
     <form action="/productos/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
         <section class ="fondo-formularios">
         <section class = "form-register">
@@ -43,6 +45,13 @@
         </section>
         </section>
     </form>
+
+    <%}else {%>
+
+        <h1>NO ESTÁS LOGUEADO</h1>
+        <a href="/usuarios/login">Inicia sesión aquí</a>
+
+    <%}%>
 
     <%- include('./partialViews/footer.ejs') %>
 </body>
