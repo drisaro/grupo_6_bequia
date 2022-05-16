@@ -1,4 +1,5 @@
 const { body } = require("express-validator");
+const path=require('path');
 
     const validator=[
       body('nombre_producto').notEmpty().withMessage('Tienes que escribir un nombre de producto'),

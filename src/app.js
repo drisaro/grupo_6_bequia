@@ -4,8 +4,10 @@ const app = express();
 const indexRouter = require("./routes/indexrouter");
 const productRouter = require("./routes/productRouter");
 const userRouter = require("./routes/userRouter");
+const cookieParser = require('cookie-parser');
 
 const userMiddleware = require("../middlewares/userMiddleware");
+const cookie_recordarme = require("../middlewares/cookie_recordame");
 
 const methodOverride =  require('method-override');
 const expressSession = require("express-session");
@@ -19,6 +21,7 @@ app.use(express.json()); //para trabajar con formularios
 app.use(express.urlencoded({ extended: false })); //permite recibir la información via post desde los formularios
 app.use(express.static(path.join(__dirname,'../public')))
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(cookieParser());
 
 app.use(expressSession({
     secret: "session secret",
@@ -26,6 +29,7 @@ app.use(expressSession({
     saveUninitialized: false,
 }));
 app.use(userMiddleware);
+app.use(cookie_recordarme);
 
 app.use("/", indexRouter);
 app.use("/productos", productRouter);

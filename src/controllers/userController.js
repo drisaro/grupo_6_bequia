@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const {validationResult}=require('express-validator');
+const bcrypt = require("bcryptjs");
+
 
 const userFilePath = path.join(__dirname, '../data/usersDataBase.json');
 
@@ -83,9 +85,11 @@ const controller = {
 			})
 		}else{
 			const users = readDB();
+			const password_encriptada = bcrypt.hashSync(req.body.password_usuario, 10)
 			const usuarioNuevo = {
 				id: users.length > 0 ? users[ users.length - 1 ].id + 1 : 1,
 				...req.body,
+				password_usuario: password_encriptada,
 				imagen_usuario: req.file?.filename ?? "default-image.png",
 				mostrar:true
 			}
@@ -118,10 +122,14 @@ const controller = {
 		const password = req.body.password_usuario
 
 		const users = readDB();
-		const usuario = users.find(user => user.email_usuario == email && user.password_usuario == password);
+
+		const usuario = users.find(user => user.email_usuario == email && (bcrypt.compareSync(password, user.password_usuario)));
 
 		if (usuario){
 
+			if (req.body.recordame != undefined) {
+                res.cookie("cookie_recordarme", req.body.email_usuario, {maxAge: 90000});
+            }
 			req.session.user = { //se guardan aca porque ahi sabemos que pasaron las validaciones
 				email_usuario: req.body.email_usuario
 			}
@@ -145,7 +153,7 @@ const controller = {
 	// Logout
 	logout: (req, res)=>{
 		req.session.destroy();
-		//res.clearCookie("color")
+		res.clearCookie("cookie_recordarme")
 		return res.redirect("/")
 	},
 	
