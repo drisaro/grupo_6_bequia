@@ -58,5 +58,15 @@
     "categoria_usuario": "vendedor",
     "imagen_usuario": "imagen_usuario-1651447242133-549873112.jpg",
     "mostrar": true
+  },
+  {
+    "id": 7,
+    "nombre_usuario": "Pepito",
+    "apellidos_usuario": "Chocotorta",
+    "email_usuario": "pepito@hotmail.com",
+    "password_usuario": "$2a$10$vVwjq32Qj4nf6xgKznk/ye1ck7hjzisw0nlLMRW7QqmFnjyML322W",
+    "categoria_usuario": "vendedor",
+    "imagen_usuario": "imagen_usuario-1652660211000-122376092.jpg",
+    "mostrar": true
   }
 ]

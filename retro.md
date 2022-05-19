@@ -45,3 +45,17 @@ Se implementó el motor de engine EJS, y motor de render.
 # Fecha: 07/04/2022
 
 Modificamos las rutas de ProductRouter.js / createProduct.ejs / productController.js
+
+--------------
+
+# Fecha: 06/05/2022
+
+Se trabajó en el sprint 5, puntualmente implementar el registro, y el login de usuarios.
+
+--------------
+
+# Fecha: 15/05/2022
+
+Se trabajó en la implementación de encriptación de contraseñas de usuarios, así como la función "Recordar"
+
+--------------

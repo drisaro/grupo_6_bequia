@@ -3,33 +3,6 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 const path=require('path');
 const multer =require('multer');
-const {body}=require('express-validator')
-
-const validations_login = require("../../middlewares/expressValidator_login");
-
-const validations=[
-    body('nombre_usuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
-    body('apellidos_usuario').notEmpty().withMessage('Tienes que escribir un apellido'),
-    body('email_usuario')
-    .notEmpty().withMessage('Tienes que escribir un correo').bail()
-    .isEmail().withMessage('debe ser un correo válido'),
-    body('password_usuario').notEmpty().withMessage('Tienes que crear una contraseña'),
-    body('categoria_usuario').notEmpty().withMessage('Tienes que elegir una categoria'),
-    body('imagen_usuario').custom((value,{req})=>{
-        let file=req.file;
-        let acceptedExtensions=['.jpg','.png']
-        if(!file){
-          throw new Error('Tiene que subir una imagen')
-        }
-        else {
-          let fileExtension=path.extname(file.originalname);
-          if(!acceptedExtensions.includes(fileExtension)){
-            throw new Error(`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`)
-          }
-        }
-        return true
-    })
-    ]
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -43,6 +16,9 @@ const storage = multer.diskStorage({
   
 const upload = multer({ storage: storage })
 
+
+const validations_login = require("../../middlewares/expressValidator_login");
+const validations = require("../../middlewares/expressValidator_register");
 
 
 /*** GET ALL THE USERS ***/ 
