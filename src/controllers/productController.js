@@ -2,6 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult}=require('express-validator');
 
+const db = require('../database/models');  //permite interactuar con la BD
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const Productos = db.Producto;
+
+
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 //let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -20,9 +26,13 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
     // Root - Show all products
     index: (req, res) => {
-        //let productList=products.filter(product=>product.mostrar)
-        let productList=readDBFiltered()
-        res.render("products",{productList,toThousand})
+		Productos.findAll()
+        .then(products=>{
+            //return res.json(products)
+			res.render("products",{productList:products,toThousand})
+        })
+        //let productList=readDBFiltered()
+        //res.render("products",{productList,toThousand})
     },
     // Create - Form to create
     createProduct: (req, res) => {
@@ -87,10 +97,15 @@ const controller = {
     },
     // Detail - Detail from one product
     product: (req, res) => {
-	const id = req.params.id;
-    const products = readDB();
-	const product = products.find(product => product.id == id);
-	return res.render("productDetail", { product, toThousand });
+	//const id = req.params.id;
+
+	Productos.findByPk(req.params.id)
+	.then(product => {
+		res.render('productDetail', {product,toThousand});
+	});
+    //const products = readDB();
+	//const product = products.find(product => product.id == id);
+	//return res.render("productDetail", { product, toThousand });
 	},
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
