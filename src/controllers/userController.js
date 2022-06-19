@@ -96,7 +96,7 @@ const controller = {
                 email_usuario: req.body.email_usuario,
                 password_usuario: req.body.password_usuario,
                 categoria_usuario: req.body.categoria_usuario,
-				//imagen_usuario: req.file?.filename ?? 'default-image.png'
+				imagen_usuario: req.file?.filename ?? Usuarios.imagen_usuario
 
             },
             {

@@ -148,5 +148,15 @@
     "categoria_producto": "anteojos",
     "imagen_producto": "imagen_producto-1650592611107-243047921.jpg",
     "mostrar": true
+  },
+  {
+    "id": 16,
+    "nombre_producto": "nuevo",
+    "descripcion_producto": "sadfds",
+    "precio_producto": "122",
+    "color_producto": "3",
+    "categoria_producto": "5",
+    "imagen_producto": "imagen_producto-1655602802835-35163739.jpg",
+    "mostrar": true
   }
 ]

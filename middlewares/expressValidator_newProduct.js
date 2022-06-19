@@ -7,8 +7,8 @@ const path=require('path');
       body('precio_producto')
       .notEmpty().withMessage('Tienes que escribir un precio').bail()
       .isInt().withMessage('el precio debe ser un numero'),
-      body('color_producto').notEmpty().withMessage('Tienes que elegir un color'),
-      body('categoria_producto').notEmpty().withMessage('Tienes que elegir una categoria'),
+      body('id_color').notEmpty().withMessage('Tienes que elegir un color'),
+      body('id_categoria').notEmpty().withMessage('Tienes que elegir una categoria'),
       body('imagen_producto').custom((value,{req})=>{
           let file=req.file;
           let acceptedExtensions=['.jpg','.png']

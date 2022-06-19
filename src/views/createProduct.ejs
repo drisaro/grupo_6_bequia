@@ -35,12 +35,16 @@
                 <% } %>
                 <h4>
                 <label>¿De qué color es?</label>
-                <select name="color_producto">
-                    <option value="mostaza" <%= locals.oldData && (oldData.color_producto==='mostaza') ? 'selected':null %> >Mostaza</option>
+                <select name="id_color">
+
+                    <% listaColores.forEach(color => { %>
+                        <option value="<%= color.id_color %>" <%= locals.oldData && (oldData.id_color===color.id_color) ? 'selected':null %> ><%= color.nombre %></option>
+                    <% }); %>
+                    <!-- <option value="mostaza" <%= locals.oldData && (oldData.color_producto==='mostaza') ? 'selected':null %> >Mostaza</option>
                     <option value="negro" <%= locals.oldData && (oldData.color_producto==='negro') ? 'selected':null %> >Negro</option>
                     <option value="blanco" <%= locals.oldData && (oldData.color_producto==='blanco') ? 'selected':null %> >Blanco</option>
                     <option value="violeta" <%= locals.oldData && (oldData.color_producto==='violeta') ? 'selected':null %> >Violeta</option>
-                    <option value="verde" <%= locals.oldData && (oldData.color_producto==='verde') ? 'selected':null %> >Verde</option>
+                    <option value="verde" <%= locals.oldData && (oldData.color_producto==='verde') ? 'selected':null %> >Verde</option> -->
                 </select>
                 <% if(locals.errors && errors.color_producto){ %>
                     <span class="text-danger"><%= errors.color_producto.msg %></span>
@@ -48,11 +52,15 @@
                 </h4>              
                 <h4>
                 <label>Elegí la categoría</label>
-                    <select name="categoria_producto">
-                        <option value="anteojos" <%= locals.oldData && (oldData.categoria_producto==='anteojos') ? 'selected':null %> >Lentes de sol</option>
+                    <select name="id_categoria">
+                        <% listaCategorias.forEach(categoria => { %>
+                            <option value="<%= categoria.id_categoria %>"  <%= locals.oldData && (oldData.id_categoria===categoria.id_categoria) ? 'selected':null %> ><%= categoria.nombre %></option>
+                        <% }); %>
+
+                        <!-- <option value="anteojos" <%= locals.oldData && (oldData.categoria_producto==='anteojos') ? 'selected':null %> >Lentes de sol</option>
                         <option value="ojotas"<%= locals.oldData && (oldData.categoria_producto==='ojotas') ? 'selected':null %> >Ojotas</option>
                         <option value="sombreros" <%= locals.oldData && (oldData.categoria_producto==='sombreros') ? 'selected':null %> >Sombreros</option>
-                        <option value="trajes" <%= locals.oldData && (oldData.categoria_producto==='trajes') ? 'selected':null %> >Trajes de baño</option>
+                        <option value="trajes" <%= locals.oldData && (oldData.categoria_producto==='trajes') ? 'selected':null %> >Trajes de baño</option> -->
                     </select>
                 <% if(locals.errors && errors.categoria_producto){ %>
                     <span class="text-danger"><%= errors.categoria_producto.msg %></span>

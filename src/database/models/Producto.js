@@ -29,7 +29,8 @@ module.exports = (sequelize, dataTypes) => {
             type:dataTypes.TINYINT(1),
             allowNull: false
         },
-        id_categoria: dataTypes.INTEGER(10)
+        id_categoria: dataTypes.INTEGER(10),
+        id_color: dataTypes.INTEGER(10)
     };
     let config = {
         tableName:"productos",
@@ -45,11 +46,16 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "id_categoria",  
         });
 
-        Producto.belongsToMany(models.Color, {
-            through: "producto_color)",
-            foreignKey: "id_producto",
-            otherKey: "id_color"
+        Producto.belongsTo(models.Color, {
+            as: "colores",
+            foreignKey: "id_color",  
         });
+
+        // Producto.belongsToMany(models.Color, {
+        //     through: "producto_color)",
+        //     foreignKey: "id_producto",
+        //     otherKey: "id_color"
+        // });
       
 
     }

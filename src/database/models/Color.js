@@ -23,11 +23,15 @@ module.exports = (sequelize, dataTypes) => {
     //Aquí debes realizar lo necesario para crear las relaciones con los otros modelos (Genre - Actor)
 
     Color.associate = (models) => {
-        Color.belongsToMany(models.Producto, {
-            through: "producto_color",
-            foreignKey: "id_color",
-            otherKey: "id_producto"
-        }) 
+        Color.hasMany(models.Producto, {
+            as: "productos",
+            foreignKey: "id_color"
+        });     
+        // Color.belongsToMany(models.Producto, {
+        //     through: "producto_color",
+        //     foreignKey: "id_color",
+        //     otherKey: "id_producto"
+        // }) 
 
     }
 
