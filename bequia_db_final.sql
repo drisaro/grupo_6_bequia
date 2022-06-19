@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
-<<<<<<< HEAD
 -- Tiempo de generación: 19-06-2022 a las 04:54:02
-=======
--- Tiempo de generación: 15-06-2022 a las 01:52:35
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -24,11 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bequia_db`
 --
-<<<<<<< HEAD
 CREATE DATABASE IF NOT EXISTS `bequia_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `bequia_db`;
-=======
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 
 -- --------------------------------------------------------
 
@@ -50,12 +43,8 @@ INSERT INTO `categorias` (`id_categoria`, `nombre`, `descripcion_categoria`) VAL
 (1, 'Ojotas', 'descripcion'),
 (2, 'Sombreros', 'descripcion sombreros'),
 (3, 'Anteojos', 'Descripción de Anteojos'),
-<<<<<<< HEAD
 (4, 'Trajes', 'Descripción para trajes'),
 (5, 'Nuevo', 'Nuevo');
-=======
-(4, 'Trajes', 'Descripción para trajes');
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 
 -- --------------------------------------------------------
 
@@ -91,19 +80,14 @@ CREATE TABLE `productos` (
   `precio_producto` decimal(10,0) NOT NULL,
   `imagen_producto` varchar(100) NOT NULL,
   `mostrar` tinyint(1) NOT NULL,
-<<<<<<< HEAD
   `id_categoria` int(11) NOT NULL,
   `id_color` int(11) NOT NULL
-=======
-  `id_categoria` int(11) NOT NULL
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-<<<<<<< HEAD
 INSERT INTO `productos` (`id`, `nombre_producto`, `descripcion_producto`, `precio_producto`, `imagen_producto`, `mostrar`, `id_categoria`, `id_color`) VALUES
 (1, 'Ojota de playa', 'descripción', '1500', 'imagen_producto-1650328044731-812177416.jpg', 1, 1, 1),
 (2, 'Traje de baño', 'descripción ', '1500', 'imagen_producto-1650328207306-179711397.jpg', 1, 4, 1),
@@ -112,37 +96,6 @@ INSERT INTO `productos` (`id`, `nombre_producto`, `descripcion_producto`, `preci
 (5, 'Anteojos xxx', 'descripción ', '1000', 'main-anteojos1.png', 0, 3, 1),
 (6, 'Ojota', 'descripción', '1500', 'imagen_producto-1650328044731-812177416.jpg', 0, 1, 1),
 (11, 'nuevo producto editado', 'dsafs', '111', 'imagen_producto-1655605173565-254385491.jpg', 0, 1, 1);
-=======
-INSERT INTO `productos` (`id`, `nombre_producto`, `descripcion_producto`, `precio_producto`, `imagen_producto`, `mostrar`, `id_categoria`) VALUES
-(1, 'Ojota de playa', 'descripción', '1500', 'imagen_producto-1650328044731-812177416.jpg', 1, 1),
-(2, 'Traje de baño', 'descripción ', '1500', 'imagen_producto-1650328207306-179711397.jpg', 1, 4),
-(3, 'Sombrero de cuero', 'descripción ', '2500', 'main-sombrero1.jpeg', 1, 2),
-(4, 'Anteojos de sol', 'descripción ', '1000', 'main-anteojos1.png', 1, 3),
-(5, 'Anteojos xxx', 'descripción ', '1000', 'main-anteojos1.png', 0, 3),
-(6, 'Ojota', 'descripción', '1500', 'imagen_producto-1650328044731-812177416.jpg', 0, 1);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `producto_color`
---
-
-CREATE TABLE `producto_color` (
-  `id_producto_color` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL,
-  `id_color` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `producto_color`
---
-
-INSERT INTO `producto_color` (`id_producto_color`, `id_producto`, `id_color`) VALUES
-(1, 4, 4),
-(2, 1, 2),
-(3, 2, 4),
-(4, 3, 1);
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 
 -- --------------------------------------------------------
 
@@ -168,11 +121,7 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id`, `nombre_usuario`, `apellidos_usuario`, `email_usuario`, `password_usuario`, `categoria_usuario`, `imagen_usuario`, `mostrar`) VALUES
 (1, 'Lucas 4', 'Barale ', 'lucasbarale@gmail.com', '$2a$10$pI/3A3HcMFuyQqS4KupPJeEG3Pcue0bD56S8CU4F1Hl9rfDTj92Oa', 'admin', 'default-image.png', 1),
 (2, 'David', 'Risaro', 'davidrisaro@gmail.com', '$2a$10$pI/3A3HcMFuyQqS4KupPJeEG3Pcue0bD56S8CU4F1Hl9rfDTj92Oa', 'admin', 'imagen_usuario-1651445645578-247391820.jpg', 1),
-<<<<<<< HEAD
 (3, 'Raimer nuevo', 'Cruz', 'raimercruz@gmail.com', '$2a$10$pI/3A3HcMFuyQqS4KupPJeEG3Pcue0bD56S8CU4F1Hl9rfDTj92Oa', 'vendedor', 'imagen_usuario-1655606212214-519932310.jpg', 1),
-=======
-(3, 'Raimer', 'Cruz', 'raimercruz@gmail.com', '$2a$10$pI/3A3HcMFuyQqS4KupPJeEG3Pcue0bD56S8CU4F1Hl9rfDTj92Oa', 'vendedor', 'avatar4.jpg', 1),
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 (4, 'Anna', 'Cernik', 'annacernik@gmail.com', '$2a$10$pI/3A3HcMFuyQqS4KupPJeEG3Pcue0bD56S8CU4F1Hl9rfDTj92Oa', 'vendedor', 'imagen_usuario-1652660211000-122376092.jpg', 1),
 (5, 'Prueba', 'prueba', 'prueba@gmail.com', '$2a$10$pI/3A3HcMFuyQqS4KupPJeEG3Pcue0bD56S8CU4F1Hl9rfDTj92Oa', 'admin', 'imagen_usuario-1655088265910-829813414.jpg', 0);
 
@@ -197,20 +146,8 @@ ALTER TABLE `colores`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`),
-<<<<<<< HEAD
   ADD KEY `id_categoria` (`id_categoria`),
   ADD KEY `id_color` (`id_color`);
-=======
-  ADD KEY `id_categoria` (`id_categoria`);
-
---
--- Indices de la tabla `producto_color`
---
-ALTER TABLE `producto_color`
-  ADD PRIMARY KEY (`id_producto_color`),
-  ADD KEY `id_color` (`id_color`),
-  ADD KEY `id_producto` (`id_producto`);
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 
 --
 -- Indices de la tabla `usuarios`
@@ -226,11 +163,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-<<<<<<< HEAD
   MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-=======
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 
 --
 -- AUTO_INCREMENT de la tabla `colores`
@@ -242,17 +175,7 @@ ALTER TABLE `colores`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT de la tabla `producto_color`
---
-ALTER TABLE `producto_color`
-  MODIFY `id_producto_color` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -268,19 +191,8 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
-<<<<<<< HEAD
   ADD CONSTRAINT `id_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_categoria`),
   ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_color`) REFERENCES `colores` (`id_color`);
-=======
-  ADD CONSTRAINT `id_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_categoria`);
-
---
--- Filtros para la tabla `producto_color`
---
-ALTER TABLE `producto_color`
-  ADD CONSTRAINT `id_color` FOREIGN KEY (`id_color`) REFERENCES `colores` (`id_color`),
-  ADD CONSTRAINT `id_producto` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id`);
->>>>>>> cfa972f13737e18bfe77faf544a33fbab3f4bcaa
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
