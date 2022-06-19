@@ -68,5 +68,15 @@
     "categoria_usuario": "vendedor",
     "imagen_usuario": "imagen_usuario-1652660211000-122376092.jpg",
     "mostrar": true
+  },
+  {
+    "id": 8,
+    "nombre_usuario": "Lucas",
+    "apellidos_usuario": "Barale",
+    "email_usuario": "lucasbarale@gmail.com",
+    "password_usuario": "$2a$10$55RxhwcUw3gI.Mbs926c9uZYzBjcDbyp2fmbX2IApk2xune5ngU0S",
+    "categoria_usuario": "admin",
+    "imagen_usuario": "imagen_usuario-1654439671142-270634800.jpg",
+    "mostrar": true
   }
 ]

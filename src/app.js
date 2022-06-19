@@ -32,7 +32,6 @@ app.use(expressSession({
 app.use(cookie_recordarme);  //esta cookie/middleWare tiene que ir antes que el userMiddleware ya que leo primero la info guardada en req.session.user
 app.use(userMiddleware);
 
-
 app.use("/", indexRouter);
 app.use("/productos", productRouter);
 app.use("/usuarios", userRouter);
