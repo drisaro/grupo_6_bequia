@@ -59,3 +59,11 @@ Se trabajó en el sprint 5, puntualmente implementar el registro, y el login de 
 Se trabajó en la implementación de encriptación de contraseñas de usuarios, así como la función "Recordar"
 
 --------------
+
+# Fecha: 14/06/2022
+
+Se trabajó en la implementación de los conceptos de Base de Datos vistos en clase.
+
+En primera instancia se discutió la estructura general que tendría la base de datos, sus tablas, y las relaciones entre estas. 
+
+Luego de definir la estructura, comenzamos el proceso de implementación del diseño establecido utilizando la metodología de mob programming: una persona compartía la pantalla (este rol fue rotando) y el resto ayudaba a escribir el código.
