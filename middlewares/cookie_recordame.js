@@ -8,11 +8,11 @@ const Usuario = require('../src/database/models/Usuario');
 const Usuarios = db.Usuario;
 
 
-const userFilePath = path.join(__dirname, '../src/data/usersDataBase.json');
+//const userFilePath = path.join(__dirname, '../src/data/usersDataBase.json');
 
-function readDB() {
-	return JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-}
+//function readDB() {
+	//return JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+//}
 
 function cookie_recordarme(req, res, next) {
 
