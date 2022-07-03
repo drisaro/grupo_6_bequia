@@ -8,15 +8,21 @@
     <%- include('./partialViews/header.ejs') %>
 
     <% if(typeof userData !='undefined' ){%>
+      
+    <form action="/productos/createProduct" method="POST" enctype="multipart/form-data" id="form-createProduct">   
 
-    <form action="/productos/createProduct" method="POST" enctype="multipart/form-data">    
         <section class ="fondo-formularios">
         <section class = "form-register">
+
+            <ul class="ulErrores">
+
+            </ul> 
                 <h4>Creá tu producto</h4>
                 <input class = "controls <%= locals.errors && errors.nombre_producto ? 'is-invalid':null %>" 
                 type = "text" name="nombre_producto" id="nombre_producto" 
                 placeholder="¿Cómo se llama?"  
                 value="<%= locals.oldData? oldData.nombre_producto:null %>">
+                <span class="text-danger"></span>
                 <% if(locals.errors && errors.nombre_producto){ %>
                     <span class="text-danger"><%= errors.nombre_producto.msg %></span>
                 <% } %>
@@ -24,12 +30,14 @@
                 <input class = "controls <%= locals.errors && errors.descripcion_producto ? 'is-invalid':null %>" 
                 type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo"
                 value="<%= locals.oldData? oldData.descripcion_producto:null %>">
+                <span class="text-danger"></span>
                 <% if(locals.errors && errors.descripcion_producto){ %>
                     <span class="text-danger"><%= errors.descripcion_producto.msg %></span>
                 <% } %>
                 <input class = "controls <%= locals.errors && errors.precio_producto ? 'is-invalid':null %>" 
                 type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?"
                 value="<%= locals.oldData? oldData.precio_producto:null %>">
+                <span class="text-danger"></span>
                 <% if(locals.errors && errors.precio_producto){ %>
                     <span class="text-danger"><%= errors.precio_producto.msg %></span>
                 <% } %>
@@ -38,7 +46,7 @@
                 <select name="id_color">
 
                     <% listaColores.forEach(color => { %>
-                        <option value="<%= color.id_color %>" <%= locals.oldData && (oldData.id_color===color.id_color) ? 'selected':null %> ><%= color.nombre %></option>
+                        <option value="<%= color.id_color %>" <%= locals.oldData && (oldData.id_color==color.id_color) ? 'selected':null %> ><%= color.nombre %></option>
                     <% }); %>
                     <!-- <option value="mostaza" <%= locals.oldData && (oldData.color_producto==='mostaza') ? 'selected':null %> >Mostaza</option>
                     <option value="negro" <%= locals.oldData && (oldData.color_producto==='negro') ? 'selected':null %> >Negro</option>
@@ -54,7 +62,7 @@
                 <label>Elegí la categoría</label>
                     <select name="id_categoria">
                         <% listaCategorias.forEach(categoria => { %>
-                            <option value="<%= categoria.id_categoria %>"  <%= locals.oldData && (oldData.id_categoria===categoria.id_categoria) ? 'selected':null %> ><%= categoria.nombre %></option>
+                            <option value="<%= categoria.id_categoria %>"  <%= locals.oldData && (oldData.id_categoria==categoria.id_categoria) ? 'selected':null %> ><%= categoria.nombre %></option>
                         <% }); %>
 
                         <!-- <option value="anteojos" <%= locals.oldData && (oldData.categoria_producto==='anteojos') ? 'selected':null %> >Lentes de sol</option>
@@ -69,7 +77,8 @@
                 <h4>
                 <div>
                     <label for="imagen_producto">Subí una foto:</label>
-                    <input type="file" name="imagen_producto" accept=".jpg" id="imagen_producto">
+                    <input type="file" name="imagen_producto" accept=".jpg, .png" id="imagen_producto">
+                    <span class="text-danger"></span>
                     <% if(locals.errors && errors.imagen_producto){ %>
                         <span class="text-danger"><%= errors.imagen_producto.msg %></span>
                     <% } %>
@@ -89,7 +98,7 @@
     <%}%>
 
     <%- include('./partialViews/footer.ejs') %>
-    
+    <script src="/js/createProductValidation.js"></script>
 </body>
 </html>
 

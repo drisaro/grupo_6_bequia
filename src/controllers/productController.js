@@ -51,6 +51,7 @@ const controller = {
 		if(resultValidation.errors.length>0){
 			const listaColores = await Colores.findAll();
 		    const listaCategorias=await Categorias.findAll();
+			console.log(req.body)
 			return res.render('createProduct',{
 				errors:resultValidation.mapped(), //mapped convierte el array en un objeto literal
 				oldData:req.body,

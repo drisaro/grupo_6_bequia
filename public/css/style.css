@@ -19,6 +19,8 @@ body{
     background-color: white;
 }
 
+
+
 main{
     width: 100%;
     max-width: 1200px;
@@ -590,3 +592,8 @@ input[name="buscador"]{
 
 
 }
+
+.is-invalid {
+    color: #842029;
+    border: 1px solid #842029;
+  }
