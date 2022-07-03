@@ -67,3 +67,12 @@ Se trabajó en la implementación de los conceptos de Base de Datos vistos en cl
 En primera instancia se discutió la estructura general que tendría la base de datos, sus tablas, y las relaciones entre estas. 
 
 Luego de definir la estructura, comenzamos el proceso de implementación del diseño establecido utilizando la metodología de mob programming: una persona compartía la pantalla (este rol fue rotando) y el resto ayudaba a escribir el código.
+
+--------------
+
+# Fecha: 3/7/2022
+
+Discutimos sobre las tareas de este sprint, las validaciones a realizar y las ya realizadas. 
+
+Utilizando la metodología mob programming, donde Lucas compartió su pantalla empezamos a trabajar con las validaciones, utilizando ejemplos vistos en clase.
+
