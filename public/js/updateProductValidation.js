@@ -1,7 +1,7 @@
 
 window.onload = function(){
     
-let form = document.querySelector("#form-createProduct");
+let form = document.querySelector("#form-updateProduct");
  
 let errores = ["Producto","Descripción","Precio","Imagen Producto"];
 

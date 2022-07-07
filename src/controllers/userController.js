@@ -209,6 +209,7 @@ const controller = {
 				if(bcrypt.compareSync(password, usuario.password_usuario))
 				{
 					//return res.render('correcto')
+					//return res.json(req.body)
 
 					if (req.body.recordame != undefined) {
 						res.cookie("cookie_recordarme", req.body.email_usuario, {maxAge: 90000});

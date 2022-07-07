@@ -6,13 +6,19 @@
 
     <% if(typeof userData !='undefined' ){%>
 
-    <form action="/productos/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+    <form action="/productos/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="form-updateProduct"> 
         <section class ="fondo-formularios">
         <section class = "form-register">
+                <ul class="ulErrores">
+
+                </ul> 
                 <h1>Editá tu producto</h1>
                 <input class = "controls" type = "text" name="nombre_producto" id="nombre_producto" placeholder="¿Cómo se llama?" value="<%= product.nombre_producto %>">
+                <span class="text-danger"></span>
                 <input class = "controls" type = "text" name="descripcion_producto" id="descripcion_producto" placeholder="Describilo" value="<%= product.descripcion_producto %>">
+                <span class="text-danger"></span>
                 <input class = "controls" type = "text" name="precio_producto" id="precio_producto" placeholder="¿A qué precio lo vendés?" value="<%= product.precio_producto %>">
+                <span class="text-danger"></span>
                 <h4>
                 <label>¿De qué color es?</label>
                 <select name="id_color">
@@ -42,8 +48,10 @@
                 </h4>
                 <h4>
                 <div>
+                   
                     <label for="imagen_producto">Subí una foto:</label>
-                    <input type="file" name="imagen_producto" accept=".jpg" id="imagen_producto" >
+                    <input type="file" name="imagen_producto" accept=".jpg, .png, .jpeg, .gif" id="imagen_producto" value="<%= product.imagen_producto %>">
+                    <span class="text-danger"></span>
                 </div>
                 </h4>
                 <input class = "botons" type = "submit" value="Editar producto">
@@ -60,6 +68,7 @@
     <%}%>
 
     <%- include('./partialViews/footer.ejs') %>
+    <!-- <script src="/js/updateProductValidation.js"></script>  -->
 </body>
 </html>
 

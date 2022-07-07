@@ -77,7 +77,7 @@
                 <h4>
                 <div>
                     <label for="imagen_producto">Subí una foto:</label>
-                    <input type="file" name="imagen_producto" accept=".jpg, .png" id="imagen_producto">
+                    <input type="file" name="imagen_producto" accept=".jpg, .png, .jpeg, .gif" id="imagen_producto">
                     <span class="text-danger"></span>
                     <% if(locals.errors && errors.imagen_producto){ %>
                         <span class="text-danger"><%= errors.imagen_producto.msg %></span>
@@ -98,7 +98,7 @@
     <%}%>
 
     <%- include('./partialViews/footer.ejs') %>
-    <script src="/js/createProductValidation.js"></script>
+     <script src="/js/createProductValidation.js"></script> 
 </body>
 </html>
 
