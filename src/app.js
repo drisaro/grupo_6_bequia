@@ -4,6 +4,10 @@ const app = express();
 const indexRouter = require("./routes/indexrouter");
 const productRouter = require("./routes/productRouter");
 const userRouter = require("./routes/userRouter");
+//Aquí pueden colocar las rutas de las APIs
+const apiUserRouter = require("./routes/api/apiUserRouter");
+const apiProductRouter = require("./routes/api/apiProductRouter");
+
 const cookieParser = require('cookie-parser');
 
 const userMiddleware = require("../middlewares/userMiddleware");
@@ -35,6 +39,8 @@ app.use(userMiddleware);
 app.use("/", indexRouter);
 app.use("/productos", productRouter);
 app.use("/usuarios", userRouter);
+app.use(apiUserRouter)
+app.use(apiProductRouter)
 
 app.listen(3000,()=>console.log('ejecutando servidor en el puerto 3000'))
 
