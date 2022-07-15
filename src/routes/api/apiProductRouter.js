@@ -23,6 +23,8 @@ const validations = require("../../../middlewares/expressValidator_newProduct");
 /*** GET ALL THE PRODUCTS  ***/ 
 router.get("/api/productos", apiProductController.list);
 
+
+router.get("/api/productos/ultimo", apiProductController.lastProduct);
 /*** CREATE ONE PRODUCT 
 
 router.post("/createProduct", upload.single("imagen_producto"), validations, productController.storeProduct);

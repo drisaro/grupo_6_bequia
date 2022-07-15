@@ -17,6 +17,7 @@ const controller = {
 			where: { mostrar: 1 }
 		})
         .then(products=>{
+			
 			let respuesta = {
 				meta: {
 					status: res.statusCode,
@@ -30,6 +31,38 @@ const controller = {
         })
         
     },
+
+	lastProduct: (req, res) => {
+        Productos.findOne(
+			{
+			where: { mostrar: 1 },
+            order : [
+                ['id', 'DESC']
+            ],
+            limit: 1
+        })
+            .then(producto => {
+				let respuesta = {
+					meta: {
+						status: res.statusCode,
+						total: producto.length,
+						url: '/api/productos/ultimo'
+					},
+					data: producto
+				}
+				return res.status(200).json(respuesta);
+
+                // let respuesta = {
+				// 	meta: {
+				// 		status: res.statusCode,
+				// 		url: '/api/productos/ultimo'
+				// 	},
+				// 	data: producto
+				// }
+				// return res.status(200).json(respuesta);
+            });
+    },
+	
     // Create - Form to create
     createProduct:async (req, res) => {
 		const listaColores = await Colores.findAll();
@@ -63,17 +96,7 @@ const controller = {
 			} catch(err) {
 				console.error(err)
 			}
-			// const products = readDB();
-			// const productoNuevo = {
-			// 	id: products.length > 0 ? products[ products.length - 1 ].id + 1 : 1,
-			// 	...req.body,
-			// 	imagen_producto: req.file?.filename ?? "default-image.png",
-			// 	mostrar:true
-			// }
-
-			// products.push(productoNuevo);
-			// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-
+			
 			
 		}
  
