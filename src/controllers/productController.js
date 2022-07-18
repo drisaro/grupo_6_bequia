@@ -146,13 +146,13 @@ const controller = {
         res.render("carrito")
     },
     // Detail - Detail from one product
-    product: (req, res) => {
+    product: async (req, res) => {
 	//const id = req.params.id;
-    
+	
+    const listaColores = await Colores.findAll();
 	Productos.findByPk(req.params.id)
 	.then(product => {
-		
-		res.render('productDetail', {product,toThousand});
+		res.render('productDetail', {product,toThousand,listaColores});
 	});
 
     //const products = readDB();

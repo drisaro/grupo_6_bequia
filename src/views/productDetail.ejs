@@ -10,23 +10,33 @@
             <div class="productDetail-img">
                 <img src="/images/Productos/<%= product.imagen_producto %>" alt="" class="productDetail-imgPrincipal">
                 <!-- <div class="productDetail-carrusel">
-                    <img src="/images/ojotas.jpg" alt="">
-                    <img src="/images/ojotas.jpg" alt="">
-                    <img src="/images/ojotas.jpg" alt="">
-                    <img src="/images/ojotas.jpg" alt=""> 
+                    <img src="/images/Productos/<%= product.imagen_producto %>" alt="">
+                    <img src="/images/Productos/<%= product.imagen_producto %>" alt="">
+                    <img src="/images/Productos/<%= product.imagen_producto %>" alt="">
+                    <img src="/images/Productos/<%= product.imagen_producto %>" alt="">
                 </div> -->
             </div>
     
             <div class="productDetail-content">
                 <h2><%= product.nombre_producto %></h2>
-                <h3 class="productDetail-precio"><%= product.precio_producto %></h3>
+                <h3 class="productDetail-precio">$<%= product.precio_producto %></h3>
                 <form action="/productos/carrito" method="GET" class="productDetail-form">
                  <label> Talla 
                      <select name="productDetail-talla" id="">
-                         <option value="36">36</option>
-                         <option value="37">37</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
                      </select>
                  </label>
+                 <label> Color
+                    <select name="productDetail-talla" id="">
+                        <% listaColores.forEach(color => { %>
+                            <option value="<%= color.id_color %>"><%= color.nombre %></option>
+                        <% }); %>
+                    </select>
+                </label>
                  <label>Cantidad <input type="number" name="productDetail-cantidad" value="1"> </label>
                  <input type="submit" name="productDetail-btn-agregar-carrito" value="Agregar al Carrito">                
                 </form>
