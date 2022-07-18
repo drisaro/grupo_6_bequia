@@ -78,8 +78,142 @@ display: none;
     text-decoration: none;
 }
 
+.header-center h2 a{
+    color: white;
+    text-decoration: none;
+}
+
 /*Fin estilos header*/
 
+/* estilos slider*/
+#container-slider
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+#slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+}
+#slider li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    z-index: -1;
+    opacity: 0;
+}
+#container-slider .arrowPrev, #container-slider .arrowNext{
+    font-size: 30pt;
+    color: rgba(204, 204, 204, 0.65);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    z-index: 2; 
+}
+#container-slider .arrowNext {
+    left: initial;
+    right: 50px !important;
+}
+.content_slider{
+    padding: 15px 30px;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+}
+.content_slider div{
+    text-align: center;
+}
+.content_slider h2{
+    font-family: 'arial';
+    font-size: 30pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.content_slider p {
+    font-size: 15pt;
+    font-family: 'arial';
+    color: #FFF;
+    margin-bottom: 20px;
+}
+#slider li .content_slider{
+    background: rgba(0, 0, 0, 0.50);
+    padding: 10px 125px;
+}
+.content_slider{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnSlider{
+    color: #FFF;
+    font-size: 15pt;
+    font-family: 'arial';
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    border: 1px solid #CCC;
+    background: rgba(13, 13, 13, 0.55);
+    border-radius: 31px;
+    text-decoration: none;
+    transition: .5s all;
+}
+.btnSlider:hover{
+    background: #111;
+    border: 1px solid #111;
+}
+.listslider {
+    position: absolute;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    bottom: 5%;
+    list-style: none;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.listslider li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.listslider li a {
+    background: #CCC;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.item-select-slid {
+    background: #FFF  !important;
+}
+/* fin estilos slider*/
 
 /*********Estilos Register******************/
 * {
@@ -88,14 +222,17 @@ display: none;
     box-sizing: border-box;
 }
 
-
-  
+.text-danger{
+    color: #bc0000;
+    font-size: 16px;
+}
 
 .form-register {
     width: 400px;
-    background-color: #E5D1AF;
+    /* background-color: #E5D1AF; */
     padding: 30px;
-    margin: 19px 61% 1em;  
+    /* margin: 19px 61% 1em;   */
+    margin: 0 auto;
     border-radius: 4px;
     font-family: "calibri";
     color: white;
@@ -103,11 +240,13 @@ display: none;
 }
 
 .fondo-formularios {
-    background: url("/images/mkln_cksld.jpg");
+    /* background: url("/images/mkln_cksld.jpg"); */
     width: 100%;
     padding: 20px 0px;
   }
-  
+ .fondo-formularios h4 {
+     color: #000;
+ }
 
 .form-register h4{
     font-size: 22px;
@@ -116,10 +255,11 @@ display: none;
 
 .controls{
     width: 100%;
-    background: #E5D1AF;
+    /* background: #E5D1AF; */
     padding: 10px;
     border-radius: 4px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+    margin-top: 8px;
     border: 1px solid#AC9D82 ;
     font-family: "calibri";
     font-size: 18px;
@@ -141,9 +281,20 @@ display: none;
     width: 100%;
     border: none;
     padding: 12px;
-    color: #AC9D82;
+    color: #000;
     margin: 16px 0;
-    font-size: 16px;
+    font-size: 18px;
+    background-color: #E5D1AF; 
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 20%);
+    cursor: pointer;
+}
+label {
+    color: #232323;
+}
+.ulErrores li {
+    color: #bc0000;
 }
 /*********Fin Estilos Register******************/
 
@@ -343,11 +494,48 @@ padding: 10px 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     padding: 8px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 20%);
 }
 .productList-item img{
  width: 100%;
 }
 
+.productList-item-nombre {
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+.productList-item-precio {
+    color: #e40521!important;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+.productList-item-link-comprar{
+    transition: all .4s ease-in-out;
+    background: #000;
+    border: 1px solid #222;
+    color: #fff;
+    padding: 10px 0;
+    margin: 15px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.productList-item-link-comprar:hover{
+    transition: all .4s ease-in-out;
+    background: #f02c0f;
+    border: 1px  solid #f02c0f;
+    color: #fff;
+}
 /*********Fin Estilos ProductsLis******************/
 /*********Estilos Home************************/
 .imagen-centrada {
@@ -415,7 +603,40 @@ footer{
     text-decoration: underline;
 }
 /*fin estilos footer*/
- 
+
+@media screen and (max-width: 460px){
+    /*slider*/
+	.content_slider h2 {
+	    font-size: 15pt !important;
+	}
+	.content_slider p {
+	    font-size: 12pt !important;
+	}
+	#container-slider .arrowPrev, #container-slider .arrowNext{
+		font-size: 20pt;
+	}
+	#container-slider .arrowPrev{
+		left: 15px;
+	}
+	#container-slider .arrowNext{
+		right: 15px !important;
+	}
+	#slider{
+		height: 400px;
+		min-height: 400px;
+	}
+	#slider li .content_slider{
+		padding: 10px 35px;
+	}
+	.btnSlider{
+		padding: 10px 30px;
+    	font-size: 10pt;
+	}
+
+    /*fin slider*/
+
+}
+
 @media (min-width:769px){
    /* Estilos header*/
    .header-left{

@@ -15,8 +15,9 @@
                 <% productList.forEach(product=> { %>
                     <article class="productList-item">
                         <a href="/productos/<%= product.id%>"><img src="/images/Productos/<%= product.imagen_producto%>" alt="<%= product.nombre_producto%>"></a>
-                        <p><%= product.precio_producto%></p>
-                        <p><%= product.nombre_producto%></p>
+                        <p class="productList-item-nombre"><%= product.nombre_producto%></p>
+                        <p class="productList-item-precio">$ <%= product.precio_producto%></p>
+                        <a href="/productos/<%= product.id%>" class="productList-item-link-comprar">Comprar </a>
                     </article>
                 <% })%>
                 

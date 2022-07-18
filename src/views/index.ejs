@@ -7,21 +7,82 @@
     
     <%- include('./partialViews/header.ejs') %>
 
+    <!-- slider-->
+    <section id="container-slider">	
+        <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+        <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+        <ul class="listslider">
+          <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+          <li><a itlist="itList_1" href="#"></a></li>
+          <li><a itlist="itList_2" href="#"></a></li>
+        </ul>
+        <ul id="slider">
+          <li style="background-image: url('/images/portada.png'); z-index:0; opacity: 1;">
+            <div class="content_slider" >
+              <div>
+                <h2>Productos de calidad</h2>
+            <p>Descubra los mejores productos para tu viaje</p>
+            <a href="#" class="btnSlider">Ver más</a>
+          </div>
+            </div>
+          </li>
+          <li style="background-image: url('/images/main-beach2.jpg'); ">
+            <div class="content_slider" >
+              <div>
+                <h2>Nuevos lanzamientos</h2>
+            <p>15% de descuentos en nuevos productos</p>
+            <a href="#" class="btnSlider">Ver más</a>
+          </div>
+            </div>
+          </li>
+          <li style="background-image: url('/images/portada1.png'); ">
+            <div class="content_slider" >
+              <div>
+                <h2>Delivery gratis</h2>
+            <p>Llegamos a todas las provincias por compras mayores de $ 2000</p>
+            <a href="#" class="btnSlider">Ver más</a>
+          </div>
+            </div>
+          </li>
+       </ul>
+     </section>
+    <!-- fin slider-->
+    
+    <main class="main-home">
+
+        <h1 class="texto-centrado">Nuevos productos</h1>
+
+            <section class="productsList">
+                <% productList.forEach(product=> { %>
+                    <article class="productList-item">
+                        <a href="/productos/<%= product.id%>"><img src="/images/Productos/<%= product.imagen_producto%>" alt="<%= product.nombre_producto%>"></a>
+                        <p class="productList-item-nombre"><%= product.nombre_producto%></p>
+                        <p class="productList-item-precio">$ <%= product.precio_producto%></p>
+                        <a href="/productos/<%= product.id%>" class="productList-item-link-comprar">Comprar </a>
+                    </article>
+                <% })%>
+                
+               
+            </section>
+
+    </main>
+
     <main class="main-home">
 
         <section class="imagen-centrada">
-            <img src="/images/main-beach2.jpg" alt="Playa">        
+            <!-- <img src="/images/main-beach2.jpg" alt="Playa">         -->
         </section>
 
         <h1 class="texto-centrado">Nuestras lineas de producto actual</h1>
-            <section class="producto-centrado">
+            <!-- <section class="producto-centrado">
                 <a href="#"><img src="/images/Productos/main-ojotas1.jpeg" alt="Ojotas"></a>
                 <a href="#"><img src="/images/Productos/main-sombrero1.jpeg" alt="Sombreros"></a>
                 <a href="#"><img src="/images/Productos/main-trajedebano.jpeg" alt="Trajes de baño"></a>
                 <a href="#"><img src="/images/Productos/main-anteojos1.png" alt="Anteojos"></a>
-            </section>
+            </section> -->
 
-        <h1 class="texto-centrado">Algunos de nuestros favoritos</h1>
+        <!-- <h1 class="texto-centrado">Algunos de nuestros favoritos</h1>
+
             <section class="producto-centrado">
                 <article>
                     <a href="#"><img src="/images/Productos/main-ojotas2.jpeg" alt="Ojotas"></a>
@@ -47,11 +108,12 @@
                     <p>40% off</p>
                     <p>Anteojos Lindos</p>
                 </article>
-            </section>
+            </section> -->
 
 
     </main>
 
     <%- include('./partialViews/footer.ejs') %>
+    <script defer src="/js/functions.js"></script>
 </body>
 </html>

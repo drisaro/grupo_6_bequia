@@ -17,7 +17,10 @@
                 <% userList.forEach(user=> { %>
                     <article class="productList-item">
                         <a href="/usuarios/<%= user.id%>"><img src="/images/Users/<%= user.imagen_usuario%>" alt="<%= user.nombre_usuario%>"></a>
-                        <p><%= user.nombre_usuario%></p>
+                        <p class="productList-item-nombre"><%= user.nombre_usuario%></p>
+                        <p class="productList-item-precio"><%= user.categoria_usuario%></p>
+                        <a href="/usuarios/<%= user.id%>" class="productList-item-link-comprar">Ver</a>
+                        
                     </article>
                 <% })%>
             </section>

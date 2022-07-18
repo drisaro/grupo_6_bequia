@@ -27,7 +27,6 @@ email_usuario.addEventListener("blur",function(){
             email_usuario.nextElementSibling.innerHTML = "";
             errores = errores.filter(err => err != "Email");
             email_usuario.classList.remove("is-invalid")
-
            
             ulErrores.innerHTML=''
             errores.forEach(error => {

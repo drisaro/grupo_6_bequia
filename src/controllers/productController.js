@@ -148,11 +148,13 @@ const controller = {
     // Detail - Detail from one product
     product: (req, res) => {
 	//const id = req.params.id;
-
+    
 	Productos.findByPk(req.params.id)
 	.then(product => {
+		
 		res.render('productDetail', {product,toThousand});
 	});
+
     //const products = readDB();
 	//const product = products.find(product => product.id == id);
 	//return res.render("productDetail", { product, toThousand });
