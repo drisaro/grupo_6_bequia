@@ -9,15 +9,8 @@
     <section class ="fondo-formularios">
     <section class = "form-register">
         <h4>Formulario registro</h4>
-<<<<<<< HEAD
-        <input class = "controls" type = "text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
-        <input class = "controls" type = "text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
-        <input class = "controls" type = "text" name="correo" id="correo" placeholder="Ingrese su correo">
-        <input class = "controls" type = "text" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
-        <input class = "controls" type = "text" name="confirmar contraseña" id="confirmar contraseña" placeholder="Confirmar contraseña">
-        
-=======
         <input class = "controls" type = "text" name="nombre_usuario" id="nombre_usuario" placeholder="Ingrese su nombre">
+        <span class="text-danger"></span>
         <input class = "controls" type = "text" name="apellidos_usuario" id="apellidos_usuario" placeholder="Ingrese su apellido">
         <input class = "controls" type = "text" name="email_usuario" id="email_usuario" placeholder="Ingrese su correo">
         <input class = "controls" type = "text" name="password_usuario" id="password_usuario" placeholder="Ingrese su contraseña">
@@ -26,7 +19,6 @@
             <label for="imagen_usuario">Subí una foto:</label>
             <input type="file" name="imagen_usuario" accept=".jpg" id="imagen_usuario">
         </div>
->>>>>>> 04d6c6a0bb4181eea02ab6ef1d2ffbabdf584fc9
         <p>Recordar campo de datos</p>
         <input class = "botons" type = "submit" value="Registrar">
         <p><a href = "#">¿Ya tengo cuenta?</a></p>
@@ -38,6 +30,6 @@
 </form>
 
     <%- include('./partialViews/footer.ejs') %>
-    
+    <script src="/js/createUserValidation.js"></script> 
 </body>
 </html>

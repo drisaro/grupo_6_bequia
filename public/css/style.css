@@ -538,6 +538,43 @@ padding: 10px 10px;
 }
 /*********Fin Estilos ProductsLis******************/
 /*********Estilos Home************************/
+.categoryList{
+ width: 100%;
+}
+.categoryList-item{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.categoryList-item img {
+    width: 100%;
+    height: 300px;
+}
+
+.texto-encima{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: #000;
+    
+    width: 230px;
+    
+    padding: 10px 10px;
+    opacity: 0.8;
+    border-radius: 0 8px 8px 0;
+}
+.texto-encima span{
+    color: white;
+    opacity: 1;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+
 .imagen-centrada {
     text-align: center;
     width: 100%;
@@ -720,6 +757,15 @@ footer{
 
 
 /*********Fin Estilos ProductList******************/
+.categoryList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ .categoryList-item {
+     width: 23%;
+ }
+ 
 
 /*********Fin Estilos ProductDetail******************/
 

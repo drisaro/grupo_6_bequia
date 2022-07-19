@@ -28,10 +28,10 @@ email_usuario.addEventListener("blur",function(){
             errores = errores.filter(err => err != "Email");
             email_usuario.classList.remove("is-invalid")
            
-            ulErrores.innerHTML=''
-            errores.forEach(error => {
-                ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-            })
+            //  ulErrores.innerHTML=''
+            //  errores.forEach(error => {
+            //      ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+            //  })
            
        }
 
@@ -63,10 +63,10 @@ password_usuario.addEventListener("blur",function(){
     errores = errores.filter(err => err != "Password");
     password_usuario.classList.remove("is-invalid")
 
-            ulErrores.innerHTML=''
-            errores.forEach(error => {
-                ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-            })
+            //  ulErrores.innerHTML=''
+            //  errores.forEach(error => {
+            //      ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+            //  })
     }
     
    }

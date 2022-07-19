@@ -172,7 +172,7 @@ const controller = {
 	},
 	// Login - Form to login
     login: (req, res) => {
-        res.render("login.ejs")
+        res.render("login.ejs",  { msgLogin: "" } )
         },
 	// Login - Form to process login
 	processLogin: (req, res) => {
@@ -227,14 +227,15 @@ const controller = {
 					return res.render("userDetail", { user: usuario });
 				}
 				else{
-					return res.render("login")
+
+					return res.render("login", { msgLogin: "Credenciales incorrectos" } )
 				}
 
 				
 			}
 
 			else {
-				return res.render("login")
+				return res.render("login", { msgLogin: "Credenciales incorrectos" })
 			}
         
 		 }) 

@@ -15,7 +15,9 @@ const controller = {
     // Root - Show all users
     list: (req, res) => {
 		Categorias.findAll(
-			
+			{
+				include: ['productos']
+			  }
 		)
         .then(categoryList=>{
 

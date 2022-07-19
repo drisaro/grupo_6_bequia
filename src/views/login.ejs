@@ -9,6 +9,9 @@
 <form action="/usuarios/login" method="POST" id="form-login"> 
     <section class ="fondo-formularios">
     <section class = "form-register form-login"> 
+        <% if(msgLogin){ %>
+            <span class="text-danger"><%= msgLogin %></span>
+        <% } %>
         <ul class="ulErrores">
 
         </ul> 

@@ -22,11 +22,12 @@ let errores = ["Producto","Descripción","Precio","Imagen Producto"];
         nombreProducto.nextElementSibling.innerHTML = "";
         errores = errores.filter(err => err != "Producto");
         nombreProducto.classList.remove("is-invalid")
-        let ulErrores = document.querySelector("ul.ulErrores");
-        ulErrores.innerHTML=''
-        errores.forEach(error => {
-            ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-        })
+
+        // let ulErrores = document.querySelector("ul.ulErrores");
+        // ulErrores.innerHTML=''
+        // errores.forEach(error => {
+        //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+        // })
         
         }
 
@@ -56,11 +57,12 @@ descripcion_producto.addEventListener("blur",function(){
     descripcion_producto.nextElementSibling.innerHTML = "";
     errores = errores.filter(err => err != "Descripción");
     descripcion_producto.classList.remove("is-invalid")
-    let ulErrores = document.querySelector("ul.ulErrores");
-    ulErrores.innerHTML=''
-    errores.forEach(error => {
-        ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-    })
+
+    // let ulErrores = document.querySelector("ul.ulErrores");
+    // ulErrores.innerHTML=''
+    // errores.forEach(error => {
+    //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+    // })
     }
 
     
@@ -95,11 +97,12 @@ precio_producto.addEventListener("blur",function(){
             precio_producto.nextElementSibling.innerHTML = "";
             errores = errores.filter(err => err != "Precio");
             precio_producto.classList.remove("is-invalid")
-            let ulErrores = document.querySelector("ul.ulErrores");
-            ulErrores.innerHTML=''
-            errores.forEach(error => {
-                ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-            })
+
+            // let ulErrores = document.querySelector("ul.ulErrores");
+            // ulErrores.innerHTML=''
+            // errores.forEach(error => {
+            //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+            // })
            }
        }
 
@@ -133,11 +136,11 @@ imagen_producto.addEventListener("blur",function(){
         errores = errores.filter(err => err != "Imagen Producto");
         imagen_producto.classList.remove("is-invalid")
 
-        let ulErrores = document.querySelector("ul.ulErrores");
-        ulErrores.innerHTML=''
-        errores.forEach(error => {
-            ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-        })
+        // let ulErrores = document.querySelector("ul.ulErrores");
+        // ulErrores.innerHTML=''
+        // errores.forEach(error => {
+        //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+        // })
       }
    }
   

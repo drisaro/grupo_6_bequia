@@ -6,6 +6,7 @@ let form = document.querySelector("#form-createUser");
 let errores = ["Nombre","Apellidos","Email","Password","Imagen Usuario"];
 
  let nombreUsuario = document.querySelector("input#nombre_usuario"); 
+ 
  nombreUsuario.addEventListener("blur",function(){
      
     if(!nombreUsuario.value || nombreUsuario.value == ""){
@@ -22,11 +23,11 @@ let errores = ["Nombre","Apellidos","Email","Password","Imagen Usuario"];
         nombreUsuario.nextElementSibling.innerHTML = "";
         errores = errores.filter(err => err != "Nombre");
         nombreUsuario.classList.remove("is-invalid")
-        let ulErrores = document.querySelector("ul.ulErrores");
-        ulErrores.innerHTML=''
-        errores.forEach(error => {
-            ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-        })
+        // let ulErrores = document.querySelector("ul.ulErrores");
+        // ulErrores.innerHTML=''
+        // errores.forEach(error => {
+        //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+        // })
         }
 
         
@@ -56,11 +57,11 @@ apellidos_usuario.addEventListener("blur",function(){
         apellidos_usuario.nextElementSibling.innerHTML = "";
     errores = errores.filter(err => err != "Apellido");
     apellidos_usuario.classList.remove("is-invalid")
-        let ulErrores = document.querySelector("ul.ulErrores");
-        ulErrores.innerHTML=''
-        errores.forEach(error => {
-            ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-        })
+        // let ulErrores = document.querySelector("ul.ulErrores");
+        // ulErrores.innerHTML=''
+        // errores.forEach(error => {
+        //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+        // })
     }
     
    }
@@ -91,11 +92,11 @@ email_usuario.addEventListener("blur",function(){
             errores = errores.filter(err => err != "Email");
             email_usuario.classList.remove("is-invalid")
 
-            let ulErrores = document.querySelector("ul.ulErrores");
-            ulErrores.innerHTML=''
-            errores.forEach(error => {
-                ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-            })
+            // let ulErrores = document.querySelector("ul.ulErrores");
+            // ulErrores.innerHTML=''
+            // errores.forEach(error => {
+            //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+            // })
            
        }
 
@@ -127,11 +128,11 @@ password_usuario.addEventListener("blur",function(){
     errores = errores.filter(err => err != "Password");
     password_usuario.classList.remove("is-invalid")
 
-        let ulErrores = document.querySelector("ul.ulErrores");
-        ulErrores.innerHTML=''
-        errores.forEach(error => {
-            ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-        })
+        // let ulErrores = document.querySelector("ul.ulErrores");
+        // ulErrores.innerHTML=''
+        // errores.forEach(error => {
+        //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+        // })
     }
     
    }
@@ -162,11 +163,11 @@ imagen_usuario.addEventListener("blur",function(){
         imagen_usuario.nextElementSibling.innerHTML = "";
         errores = errores.filter(err => err != "Imagen Usuario");
         imagen_usuario.classList.remove("is-invalid")
-        let ulErrores = document.querySelector("ul.ulErrores");
-        ulErrores.innerHTML=''
-        errores.forEach(error => {
-            ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
-        })
+        // let ulErrores = document.querySelector("ul.ulErrores");
+        // ulErrores.innerHTML=''
+        // errores.forEach(error => {
+        //     ulErrores.innerHTML += `<li>Corregir: ${error}</li>`
+        // })
       }
    }
   
