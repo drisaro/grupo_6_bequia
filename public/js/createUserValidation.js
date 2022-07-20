@@ -3,7 +3,7 @@ window.onload = function(){
     
 let form = document.querySelector("#form-createUser");
  
-let errores = ["Nombre","Apellidos","Email","Password","Imagen Usuario"];
+let errores = ["Nombre","Apellido","Email","Password","Imagen Usuario"];
 
  let nombreUsuario = document.querySelector("input#nombre_usuario"); 
  
